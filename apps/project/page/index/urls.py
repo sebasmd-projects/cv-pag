@@ -1,3 +1,12 @@
-from django.urls import include, path
+from django.urls import path
+from .views import IndexTemplateView
 
-urlpatterns = []
+app_name = "index"
+
+urlpatterns = [
+    path(
+        '',
+        IndexTemplateView.as_view(),
+        name='home'
+    )
+]

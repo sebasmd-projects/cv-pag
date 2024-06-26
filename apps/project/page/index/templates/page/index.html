@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Sebastián Morales{% endblock title %}
+
+{% block aditional_css %}
+    <meta content="" name="description">
+    <meta content="python, cv, qa, dev, git, developer, open to work, work, employee" name="keywords">
+{% endblock aditional_css %}
+
+{% block main %}
+    <main class="main">
+        {% include 'sections/hero.html' %}
+        {% include 'sections/about.html' %}
+        {% include 'sections/stats.html' %}
+        {% include 'sections/skills.html' %}
+        {% include 'sections/resume.html' %}
+        {% include 'sections/portfolio.html' %}
+        {% include 'sections/services.html' %}
+        {% include 'sections/testimonials.html' %}
+        {% include 'sections/contact.html' %}
+    </main>
+{% endblock main %}
