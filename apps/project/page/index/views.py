@@ -15,7 +15,7 @@ class IndexTemplateView(TemplateView):
 class ContactFormView(edit.FormView):
     form_class = ContactForm
     success_url = reverse_lazy('index:home')
-    template_name = "project/page/index/templates/includes/sections/contact/form.html"
+    template_name = "project/page/index/templates/sections/contact/form.html"
 
     def form_valid(self, form):
         unique_id = form.cleaned_data.get('unique_id')
@@ -28,8 +28,9 @@ class ContactFormView(edit.FormView):
         send_mail(
             subject='Sebastián Morales | Mensaje Recibido!',
             message=(
-                f'Gracias {contact.names} por contatarme.\n'
-                f'Recuerda que puedes escribirme a mi número: +57 300 295 4040.'
+                f'Gracias {contact.names} por contactarme.\n'
+                f'Recuerda que puedes escribirme a mi número: +57 300 295 4040.\n',
+                f'Próximamente, me pondré en contacto contigo, gracias.'
             ),
             from_email=settings.DEFAULT_FROM_EMAIL,
             recipient_list=[contact.email],
