@@ -25,15 +25,16 @@ except:
 def robots_txt(request):
     lines = [
         "User-agent: *",
-        f"Disallow: {reverse("serverhttp:httprequest")}",
-        f"Disallow: {reverse("serverhttp:setup")}",
-        f"Disallow: {reverse("serverhttp:env")}",
-        f"Disallow: {reverse("serverhttp:phpmyadmin")}",
-        f"Disallow: {reverse("serverhttp:wepmyadmin")}",
-        f"Disallow: {reverse("serverhttp:html")}",
-        f"Disallow: {reverse("serverhttp:txt")}",
-        f"Disallow: {reverse("serverhttp:well-known")}",
-        f"Disallow: {reverse("serverhttp:php")}",
+        "Disallow: /*",
+        "Disallow: /SETUP",
+        "Disallow: /ENV",
+        "Disallow: /PHPMYADMIN",
+        "Disallow: /WEPMYADMIN",
+        "Disallow: /HTML",
+        "Disallow: /TXT",
+        "Disallow: /WELLKNOWN",
+        "Disallow: /PHP"
+        "Disallow: /PRIVATE"
     ]
 
     return HttpResponse("\n".join(lines), content_type="text/plain")
