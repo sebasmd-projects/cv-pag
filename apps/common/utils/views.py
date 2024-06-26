@@ -25,7 +25,6 @@ except:
 def robots_txt(request):
     lines = [
         "User-agent: *",
-        f"Disallow: {reverse("admin:index")}",
         f"Disallow: {reverse("serverhttp:httprequest")}",
         f"Disallow: {reverse("serverhttp:setup")}",
         f"Disallow: {reverse("serverhttp:env")}",
