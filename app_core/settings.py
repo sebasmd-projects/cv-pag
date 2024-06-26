@@ -47,7 +47,7 @@ INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + CUSTOM_APPS
 
 UTILS_PATH = 'apps.common.utils'
 
-ADMIN_URL = 'l/admin/'
+ADMIN_URL = os.getenv('DJANGO_ADMIN_URL')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
