@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import IndexTemplateView
+from .views import IndexTemplateView, ContactFormView
 
 app_name = "index"
 
@@ -8,5 +8,10 @@ urlpatterns = [
         '',
         IndexTemplateView.as_view(),
         name='home'
+    ),
+    path(
+        'contact/',
+        ContactFormView.as_view(),
+        name='contact'
     )
 ]
