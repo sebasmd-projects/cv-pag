@@ -13,12 +13,31 @@ from .api import (TokenBlacklistResponseSerializer,
                   TokenRefreshResponseSerializer,
                   TokenVerifyResponseSerializer)
 from .backend import EmailOrUsernameModelBackend
+from django.urls import reverse
+from django.http import HttpResponse
 
 try:
     template_name = settings.ERROR_TEMPLATE
 except:
     template_name = 'errors_template.html'
 
+
+def robots_txt(request):
+    lines = [
+        "User-agent: *",
+        f"Disallow: {reverse("admin:index")}",
+        f"Disallow: {reverse("serverhttp:httprequest")}",
+        f"Disallow: {reverse("serverhttp:setup")}",
+        f"Disallow: {reverse("serverhttp:env")}",
+        f"Disallow: {reverse("serverhttp:phpmyadmin")}",
+        f"Disallow: {reverse("serverhttp:wepmyadmin")}",
+        f"Disallow: {reverse("serverhttp:html")}",
+        f"Disallow: {reverse("serverhttp:txt")}",
+        f"Disallow: {reverse("serverhttp:well-known")}",
+        f"Disallow: {reverse("serverhttp:php")}",
+    ]
+
+    return HttpResponse("\n".join(lines), content_type="text/plain")
 
 def handler400(request, exception, *args, **argv):
     status = 400
@@ -89,7 +108,6 @@ class DecoratedTokenObtainPairView(TokenObtainPairView):
             status.HTTP_200_OK: TokenObtainPairResponseSerializer,
         }
     )
-    
     def post(self, request, *args, **kwargs):
         response = super().post(request, *args, **kwargs)
         username_or_email = request.data.get('username')

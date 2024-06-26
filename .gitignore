@@ -4,6 +4,8 @@
 ### Files ###
 database_schema.sql
 users.json
+tasks.json
+.vscode
 
 ### Django ###
 *.log
