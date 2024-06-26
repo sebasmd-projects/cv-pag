@@ -79,6 +79,10 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+.sr-only {
+  visibility: hidden;
+  display: none;
+}
 .header {
   --background-color: var(--header-background-color);
   --default-color: var(--header-color);
