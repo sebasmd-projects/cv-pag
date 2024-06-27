@@ -89,6 +89,34 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
+ * WhatsApp button and form toggle
+ */
+  let whatsappB = document.querySelector('.whatsapp-button');
+
+  function togglewhatsappB() {
+    if (whatsappB) {
+      window.scrollY > 100 ? whatsappB.classList.add('active') : whatsappB.classList.remove('active');
+    }
+  }
+
+  function sendMessage() {
+    let messageField = document.querySelector('#message-text').value;
+    let message = messageField.trim();
+
+    if (message === "") {
+      messageField = "Hola!";
+    }
+
+    let phone = "573002954040";
+    let whatsappURL = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(messageField)}`;
+    window.open(whatsappURL, '_blank');
+  }
+
+  window.addEventListener('load', togglewhatsappB);
+  document.addEventListener('scroll', togglewhatsappB);
+  document.querySelector('#send-whatsapp-message').addEventListener('click', sendMessage);
+
+  /**
    * Animation on scroll function and init
    */
   function aosInit() {
