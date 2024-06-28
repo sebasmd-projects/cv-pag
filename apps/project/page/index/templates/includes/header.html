@@ -1,22 +1,20 @@
-{% load static %}
+{% load static i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
 
 <header id="header" class="header d-flex flex-column">
   <i class="header-toggle d-xl-none bi bi-list"></i>
-
   <div class="profile-img">
     <img
       src="{% static 'img/my-profile-cut.webp' %}"
-      alt=""
+      alt="imagen de perfil, Sebastián Morales"
       class="img-fluid rounded-circle"
     />
   </div>
-
   <a href="/" class="logo d-flex align-items-center justify-content-center">
-    <!-- Uncomment the line below if you also wish to use an image logo -->
-    <!-- <img src="{% static 'img/logo.png' %}" alt=""> -->
     <h1 class="sitename">Sebastián Morales</h1>
   </a>
-
   <div class="social-links text-center">
     <a
       href="https://www.linkedin.com/in/sebasti%C3%A1n-morales-delgado-33902b1a1/"
@@ -28,37 +26,46 @@
       <span class="sr-only">Sebastián Morales Delgado's LinkedIn Profile</span>
     </a>
   </div>
-
   <nav id="navmenu" class="navmenu">
     <ul>
       <li>
-        <a href="#hero"><i class="bi bi-house navicon"></i>Home</a>
+        <a href="#hero"><i class="bi bi-house navicon"></i>{% trans 'Home' %}</a>
       </li>
       <li>
-        <a href="#about"><i class="bi bi-person navicon"></i>About</a>
+        <a href="#about"><i class="bi bi-person navicon"></i>{% trans 'About' %}</a>
       </li>
       <li class="dropdown">
-        <a href="#resume">
+        <button>
           <i class="bi bi-file-earmark-text navicon"></i>
-          <span>Resume</span>
+          <span>{% trans 'Resume' %}</span>
           <i class="bi bi-chevron-down toggle-dropdown"></i>
-        </a>
+        </button>
         <ul>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#profesional-experience">Profesional Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#resume">{% trans 'Resume' %}</a></li>
+          <li><a href="#profesional-experience">{% trans 'Profesional Experience' %}</a></li>
+          <li><a href="#education">{% trans 'Education' %}</a></li>
+          <li><a href="#certifications">{% trans 'Certifications' %}</a></li>
         </ul>
       </li>
       <li>
-        <a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a>
+        <a href="#contact"><i class="bi bi-envelope navicon"></i>{% trans 'Contact' %}</a>
       </li>
-      <!-- <li>
-        <a href="#services"><i class="bi bi-hdd-stack navicon"></i>Services</a>
+      <li class="dropdown">
+        <button>
+          <i class="bi bi-translate navicon"></i>
+          <span>{% trans 'Language' %}</span>
+          <i class="bi bi-chevron-down toggle-dropdown"></i>
+        </button>
+        <ul>
+          {% for lang in LANGUAGES %}
+          <li>
+            <a href="{% url 'set_language' %}?lang={{ lang.0 }}">
+              {{ lang.1 }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
       </li>
-      <li>
-        <a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a>
-      </li> -->
     </ul>
   </nav>
 </header>

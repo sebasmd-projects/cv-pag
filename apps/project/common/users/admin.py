@@ -32,7 +32,7 @@ class UserAdminForm(forms.ModelForm):
     )
 
     password = ReadOnlyPasswordHashField(
-        label=_("contraseña"),
+        label=_("password"),
         help_text=_(
             "Raw passwords are not stored, so there is no way to see this "
             "user’s password, but you can change the password using "
@@ -95,7 +95,7 @@ class UserModelAdmin(UserAdmin, ImportExportActionModelAdmin):
 
     fieldsets = (
         (
-            _('Información de usuario'), {
+            _('User Information'), {
                 'fields': (
                     'username',
                     'password'
@@ -103,7 +103,7 @@ class UserModelAdmin(UserAdmin, ImportExportActionModelAdmin):
             }
         ),
         (
-            _('Información personal'), {
+            _('Personal Information'), {
                 'fields': (
                     'first_name',
                     'last_name',
@@ -116,7 +116,7 @@ class UserModelAdmin(UserAdmin, ImportExportActionModelAdmin):
             }
         ),
         (
-            _('Permisos'), {
+            _('Permissions'), {
                 'fields': (
                     'is_active',
                     'is_staff',
@@ -127,7 +127,7 @@ class UserModelAdmin(UserAdmin, ImportExportActionModelAdmin):
             }
         ),
         (
-            _('Fechas'), {
+            _('Dates'), {
                 'fields': (
                     'last_login',
                     'created',
@@ -136,7 +136,7 @@ class UserModelAdmin(UserAdmin, ImportExportActionModelAdmin):
             }
         ),
         (
-            _('Orden por defecto'), {
+            _('Priority'), {
                 'fields': (
                     'default_order',
                 )
@@ -152,6 +152,5 @@ class UserModelAdmin(UserAdmin, ImportExportActionModelAdmin):
     def get_full_name(self, obj):
         return obj.get_full_name()
 
-    get_full_name.short_description = _('Nombres completos')
-    get_age.short_description = _('Edad')
-    get_age.short_description = _('Edad')
+    get_full_name.short_description = _('Names')
+    get_age.short_description = _('Age')

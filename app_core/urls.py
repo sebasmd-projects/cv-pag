@@ -49,6 +49,10 @@ urlpatterns = [
         "ckeditor5/",
         include('django_ckeditor_5.urls')
     ),
+    re_path(
+        r'^rosetta/',
+        include('rosetta.urls')
+    ),
     path(
         '',
         include(apps_urls)

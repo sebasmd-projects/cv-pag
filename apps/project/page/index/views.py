@@ -29,7 +29,7 @@ class ContactFormView(edit.FormView):
             subject='Sebastián Morales | Mensaje Recibido!',
             message=(
                 f'Gracias {contact.names} por contactarme.\n'
-                f'Recuerda que puedes escribirme a mi número: +57 300 295 4040.\n',
+                f'Recuerda que puedes escribirme a mi número: +57 300 295 4040.\n'
                 f'Próximamente, me pondré en contacto contigo, gracias.'
             ),
             from_email=settings.DEFAULT_FROM_EMAIL,

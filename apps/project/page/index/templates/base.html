@@ -1,7 +1,7 @@
 {% extends 'raw.html' %}
 
 
-{% load static %}
+{% load static i18n %}
 
 
 {% block meta %}
@@ -91,8 +91,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success" id="send-whatsapp-message">Send message <i class="bi bi-send"></i></button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans 'Close' %}</button>
+          <button type="button" class="btn btn-success" id="send-whatsapp-message">{% trans 'Send message' %}<i class="bi bi-send"></i></button>
         </div>
       </div>
     </div>

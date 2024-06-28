@@ -1,41 +1,18 @@
-{% load static %}
+{% load static i18n %}
 
 <!-- Contact Section -->
 <section id="contact" class="contact section">
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2 class="text-center">Contact</h2>
-    <p>What would you like to talk about?</p>
+    <h2 class="text-center">{% trans 'Contact' %}</h2>
+    <p>{% trans 'What would you like to talk about?' %}</p>
   </div>
   <!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="row gy-4">
       <div class="col-lg-7">
-        <form
-          action="{% url 'index:contact' %}"
-          method="post"
-          class="contact-form"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          {% csrf_token %} {{contact_form.non_field_errors}}
-          {{contact_form.unique_id}}
-
-          <div class="row gy-2">
-            <div class="col-md-6">{{contact_form.names}}</div>
-
-            <div class="col-md-6">{{contact_form.email}}</div>
-
-            <div class="col-md-12">{{contact_form.title}}</div>
-
-            <div class="col-md-12">{{contact_form.message}}</div>
-
-            <div class="col-md-12 text-center">
-              <button type="submit" id="submit-button">Send Message</button>
-            </div>
-          </div>
-        </form>
+        {% include 'sections/contact/form.html' %}
       </div>
 
       <div class="col-lg-5">
@@ -43,7 +20,7 @@
           <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
             <i class="bi bi-geo-alt flex-shrink-0"></i>
             <div>
-              <h3>Address</h3>
+              <h3>{% trans 'Address' %}</h3>
               <p>Colombia, Antioquia</p>
             </div>
           </div>
@@ -57,7 +34,7 @@
               ><i class="bi bi-telephone flex-shrink-0"></i>
             </a>
             <div>
-              <h3>Call Me</h3>
+              <h3>{% trans 'Call Me' %}</h3>
               <p>
                 <a
                   href="https://api.whatsapp.com/send?phone=573002954040"
@@ -73,7 +50,7 @@
           <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
             <i class="bi bi-envelope flex-shrink-0"></i>
             <div>
-              <h3>Email Me</h3>
+              <h3>{% trans 'Email Me' %}</h3>
               <p>sebasmoralesd@gmail.com</p>
               <p>sebastian@sebasmoralesd.com</p>
             </div>

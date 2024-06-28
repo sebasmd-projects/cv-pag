@@ -1,5 +1,7 @@
 from django.conf import settings
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import redirect, render
+from django.utils import translation
 from django.utils.translation import gettext_lazy as _
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework import status
@@ -13,8 +15,6 @@ from .api import (TokenBlacklistResponseSerializer,
                   TokenRefreshResponseSerializer,
                   TokenVerifyResponseSerializer)
 from .backend import EmailOrUsernameModelBackend
-from django.urls import reverse
-from django.http import HttpResponse
 
 try:
     template_name = settings.ERROR_TEMPLATE
@@ -38,6 +38,7 @@ def robots_txt(request):
 
     return HttpResponse("\n".join(lines), content_type="text/plain")
 
+
 def handler400(request, exception, *args, **argv):
     status = 400
     return render(
@@ -47,7 +48,7 @@ def handler400(request, exception, *args, **argv):
         context={
             'exception': str(exception),
             'title': _('Error 400'),
-            'error': _('Solicitud Incorrecta'),
+            'error': _('Bad Request'),
             'status': status,
             'error_favicon': ''
         }
@@ -63,7 +64,7 @@ def handler403(request, exception, *args, **argv):
         context={
             'exception': str(exception),
             'title': _('Error 403'),
-            'error': _('Solicitud Prohibida'),
+            'error': _('Prohibited Request'),
             'status': status,
             'error_favicon': ''
         }
@@ -79,7 +80,7 @@ def handler404(request, exception, *args, **argv):
         context={
             'exception': str(exception),
             'title': _('Error 404'),
-            'error': _('Página no encontrada'),
+            'error': _('Page not found'),
             'status': status,
             'error_favicon': ''
         }
@@ -94,12 +95,22 @@ def handler500(request, *args, **argv):
         status=500,
         context={
             'title': _('Error 500'),
-            'error': _('Error del Servidor'),
+            'error': _('Server error'),
             'status': status,
             'error_favicon': ''
         }
     )
 
+
+def set_language(request):
+    lang_code = request.GET.get('lang', None)
+    if lang_code and lang_code in dict(settings.LANGUAGES).keys():
+        translation.activate(lang_code)
+        response = redirect(request.META.get('HTTP_REFERER'))
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
+        return response
+    else:
+        return redirect(request.META.get('HTTP_REFERER'))
 
 class DecoratedTokenObtainPairView(TokenObtainPairView):
     @swagger_auto_schema(

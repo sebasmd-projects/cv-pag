@@ -1,15 +1,12 @@
-{% load static %}
+{% load static i18n %}
 
-<!-- Skills Section -->
 <section id="skills" class="skills section">
-  <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Skills</h2>
+    <h2>{% trans 'Skills' %}</h2>
     <p>
-      Platforms, Technologies, Languages
+      {% trans 'Platforms, Technologies, Languages' %}
     </p>
   </div>
-  <!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="row skills-content skills-animation">
@@ -27,7 +24,6 @@
             ></div>
           </div>
         </div>
-        <!-- End Skills Item -->
 
         <div class="progress">
           <span class="skill"
@@ -44,7 +40,6 @@
             ></div>
           </div>
         </div>
-        <!-- End Skills Item -->
 
         <div class="progress">
           <span class="skill"><span>Python</span> <i class="val">90%</i></span>
@@ -59,7 +54,6 @@
             ></div>
           </div>
         </div>
-        <!-- End Skills Item -->
 
         <div class="progress">
           <span class="skill"><span>Java</span> <i class="val">70%</i></span>
@@ -74,7 +68,6 @@
             ></div>
           </div>
         </div>
-        <!-- End Skills Item -->
 
         <div class="progress">
           <span class="skill"><span>C++</span> <i class="val">70%</i></span>
@@ -89,7 +82,6 @@
             ></div>
           </div>
         </div>
-        <!-- End Skills Item -->
       </div>
 
       <div class="col-sm-6">
@@ -107,7 +99,6 @@
             ></div>
           </div>
         </div>
-        <!-- End Skills Item -->
 
         <div class="progress">
           <span class="skill"
@@ -124,7 +115,6 @@
             ></div>
           </div>
         </div>
-        <!-- End Skills Item -->
 
         <div class="progress">
           <span class="skill">
@@ -140,7 +130,6 @@
             ></div>
           </div>
         </div>
-        <!-- End Skills Item -->
 
         <div class="progress">
           <span class="skill">
@@ -156,10 +145,9 @@
             ></div>
           </div>
         </div>
-        <!-- End Skills Item -->
 
         <div class="progress">
-          <span class="skill"><span>English (B2)</span> <i class="val">75%</i></span>
+          <span class="skill"><span>{% trans 'English (B2)' %}</span> <i class="val">75%</i></span>
           <div class="progress-bar-wrap">
             <div
               class="progress-bar"
@@ -171,9 +159,7 @@
             ></div>
           </div>
         </div>
-        <!-- End Skills Item -->
       </div>
     </div>
   </div>
 </section>
-<!-- /Skills Section -->

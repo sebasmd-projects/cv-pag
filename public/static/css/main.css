@@ -209,7 +209,9 @@ h6 {
 }
 
 .navmenu a,
-.navmenu a:focus {
+.navmenu a:focus,
+.navmenu button,
+.navmenu button:focus {
   color: var(--nav-color);
   padding: 15px 10px;
   font-family: var(--nav-font);
@@ -222,14 +224,27 @@ h6 {
   width: 100%;
 }
 
+.navmenu button,
+.navmenu button:focus {
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: var(--button-background-color);
+}
+
 .navmenu a .navicon,
-.navmenu a:focus .navicon {
+.navmenu a:focus .navicon,
+.navmenu button .navicon,
+.navmenu button:focus .navicon
+{
   font-size: 20px;
   margin-right: 10px;
 }
 
 .navmenu a .toggle-dropdown,
-.navmenu a:focus .toggle-dropdown {
+.navmenu a:focus .toggle-dropdown,
+.navmenu button .toggle-dropdown,
+.navmenu button:focus .toggle-dropdown {
   font-size: 12px;
   line-height: 0;
   margin-left: auto;
@@ -245,7 +260,9 @@ h6 {
 }
 
 .navmenu a .toggle-dropdown:hover,
-.navmenu a:focus .toggle-dropdown:hover {
+.navmenu a:focus .toggle-dropdown:hover,
+.navmenu button .toggle-dropdown:hover,
+.navmenu button:focus .toggle-dropdown:hover {
   background-color: var(--accent-color);
   color: var(--contrast-color);
 }

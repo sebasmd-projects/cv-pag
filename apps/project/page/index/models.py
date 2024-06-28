@@ -28,7 +28,7 @@ class ContactModel(TimeStampedModel):
     )
 
     message = models.TextField(
-        _("mesage")
+        _("message")
     )
 
     unique_id = models.UUIDField(

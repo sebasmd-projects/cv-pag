@@ -1,0 +1,526 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-28 00:30-0500\n"
+"PO-Revision-Date: 2024-06-28 00:29-0500\n"
+"Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\apps\project\page\index\forms.py:13
+msgid "Names"
+msgstr "Nombres"
+
+#: .\apps\project\page\index\forms.py:25
+msgid "Email"
+msgstr "Correo"
+
+#: .\apps\project\page\index\forms.py:37
+msgid "Subject"
+msgstr "Asunto"
+
+#: .\apps\project\page\index\forms.py:49
+msgid "Message"
+msgstr "Mensaje"
+
+#: .\apps\project\page\index\models.py:16
+msgid "names"
+msgstr "nombres"
+
+#: .\apps\project\page\index\models.py:21
+msgid "email"
+msgstr "correo"
+
+#: .\apps\project\page\index\models.py:26
+msgid "subject"
+msgstr "asunto"
+
+#: .\apps\project\page\index\models.py:31
+msgid "message"
+msgstr "mensaje"
+
+#: .\apps\project\page\index\templates\base.html:94
+msgid "Close"
+msgstr "Cerrar"
+
+#: .\apps\project\page\index\templates\base.html:95
+msgid "Send message"
+msgstr "Enviar mensaje"
+
+#: .\apps\project\page\index\templates\includes\footer.html:7
+msgid "Modified with love by"
+msgstr "Modificado con amor por"
+
+#: .\apps\project\page\index\templates\includes\footer.html:7
+msgid "Designed by"
+msgstr "Diseñado por"
+
+#: .\apps\project\page\index\templates\includes\header.html:32
+msgid "Home"
+msgstr "Inicio"
+
+#: .\apps\project\page\index\templates\includes\header.html:35
+#: .\apps\project\page\index\templates\sections\about.html:5
+msgid "About"
+msgstr "Conóceme"
+
+#: .\apps\project\page\index\templates\includes\header.html:40
+#: .\apps\project\page\index\templates\includes\header.html:44
+#: .\apps\project\page\index\templates\sections\resume.html:5
+msgid "Resume"
+msgstr "Hoja de Vida"
+
+#: .\apps\project\page\index\templates\includes\header.html:45
+msgid "Profesional Experience"
+msgstr "Experiencia Profesional"
+
+#: .\apps\project\page\index\templates\includes\header.html:46
+#: .\apps\project\page\index\templates\sections\resume.html:129
+msgid "Education"
+msgstr "Educación"
+
+#: .\apps\project\page\index\templates\includes\header.html:47
+#: .\apps\project\page\index\templates\sections\resume.html:144
+msgid "Certifications"
+msgstr "Certificaciones"
+
+#: .\apps\project\page\index\templates\includes\header.html:51
+#: .\apps\project\page\index\templates\sections\contact\contact.html:7
+msgid "Contact"
+msgstr "Contáctame"
+
+#: .\apps\project\page\index\templates\includes\header.html:56
+msgid "Language"
+msgstr "Idioma"
+
+#: .\apps\project\page\index\templates\sections\about.html:7
+msgid ""
+"\n"
+"        I am looking for an employment opportunity, where I can take "
+"advantage of\n"
+"        my organizational, communication and leadership skills in the "
+"development\n"
+"        or automation of quality assurance and processes.\n"
+"      "
+msgstr ""
+"\n"
+"Estoy buscando una oportunidad de empleo, donde pueda aprovechar mis "
+"habilidades organizativas, comunicativas y de liderazgo en el desarrollo o "
+"la automatización de procesos y aseguramiento de la calidad."
+
+#: .\apps\project\page\index\templates\sections\about.html:25
+msgid "Backend Developer &amp; QA (Automation/Functional)"
+msgstr "Desarrollador Backend &amp; QA (Automatizador/Manual)"
+
+#: .\apps\project\page\index\templates\sections\about.html:27
+msgid ""
+"\n"
+"            Solid experience in software development and automation, leading "
+"work teams, optimizing processes and improving continuous software quality.\n"
+"          "
+msgstr ""
+"\n"
+"Sólida experiencia en desarrollo y automatización de software, liderando "
+"equipos de trabajo, optimizando procesos y mejorando continuamente la "
+"calidad del software."
+
+#: .\apps\project\page\index\templates\sections\about.html:35
+msgid "Email:"
+msgstr "Correo:"
+
+#: .\apps\project\page\index\templates\sections\about.html:46
+msgid "Phone:"
+msgstr "Celular:"
+
+#: .\apps\project\page\index\templates\sections\about.html:57
+msgid "Residence:"
+msgstr "Dirección:"
+
+#: .\apps\project\page\index\templates\sections\about.html:62
+msgid "Availability:"
+msgstr "Disponibilidad:"
+
+#: .\apps\project\page\index\templates\sections\about.html:63
+msgid "Available"
+msgstr "Disponible"
+
+#: .\apps\project\page\index\templates\sections\about.html:70
+msgid "Age:"
+msgstr "Edad"
+
+#: .\apps\project\page\index\templates\sections\about.html:74
+msgid "Degree:"
+msgstr "Título"
+
+#: .\apps\project\page\index\templates\sections\about.html:75
+msgid "Systems Ing. (Student)"
+msgstr "Ing. de Sistemas (Estudiante)"
+
+#: .\apps\project\page\index\templates\sections\about.html:79
+msgid "Website:"
+msgstr "Sitio:"
+
+#: .\apps\project\page\index\templates\sections\about.html:90
+msgid ""
+"\n"
+"            Committed to contributing to the success of each project, either "
+"in\n"
+"            promoting efficiency and excellence in software development or "
+"product\n"
+"            quality.\n"
+"          "
+msgstr ""
+"\n"
+"Comprometido a contribuir al éxito de cada proyecto, ya sea promoviendo la "
+"eficiencia y excelencia en el desarrollo de software o la calidad del "
+"producto."
+
+#: .\apps\project\page\index\templates\sections\contact\contact.html:8
+msgid "What would you like to talk about?"
+msgstr "¿Qué te gustaría hablar conmigo?"
+
+#: .\apps\project\page\index\templates\sections\contact\contact.html:23
+msgid "Address"
+msgstr "Dirección"
+
+#: .\apps\project\page\index\templates\sections\contact\contact.html:37
+msgid "Call Me"
+msgstr "Llámame"
+
+#: .\apps\project\page\index\templates\sections\contact\contact.html:53
+msgid "Email Me"
+msgstr "Escríbeme "
+
+#: .\apps\project\page\index\templates\sections\contact\form.html:23
+msgid "Send Message"
+msgstr "Enviar Mensaje"
+
+#: .\apps\project\page\index\templates\sections\hero.html:11
+msgid "I'm"
+msgstr "Soy"
+
+#: .\apps\project\page\index\templates\sections\hero.html:14
+msgid "Developer, Quality Assurance, Freelancer"
+msgstr "Desarrollador, Asegurador de la Calidad, Freelancer"
+
+#: .\apps\project\page\index\templates\sections\resume.html:7
+msgid ""
+"\n"
+"        I am a developer with a solid background in quality assurance (QA) "
+"and\n"
+"        automation; I specialize in the realm of automated testing, "
+"following the\n"
+"        ISTQB standards.\n"
+"      "
+msgstr ""
+"\n"
+"Soy un desarrollador backend con una sólida formación en aseguramiento de "
+"calidad (QA) y automatización; Me especializo en el ámbito de las pruebas "
+"automatizadas, siguiendo los\n"
+"Estándares de la ISTQB."
+
+#: .\apps\project\page\index\templates\sections\resume.html:14
+msgid ""
+"\n"
+"        Having done the hat of a backend developer in the past, I seamlessly "
+"blend\n"
+"        my coding prowess with a deep understanding of testing principles, "
+"agile\n"
+"        methodologies, and best practices throughout the software "
+"development\n"
+"        lifecycle (SDLC).\n"
+"      "
+msgstr ""
+"\n"
+"Habiendo desempeñado el papel de desarrollador backend en el pasado, combino "
+"perfectamente\n"
+"mi destreza en codificación con un profundo conocimiento de los principios "
+"de prueba,\n"
+"metodologías ágiles y mejores prácticas a lo largo del ciclo de vida del "
+"desarrollo de software (SDLC)."
+
+#: .\apps\project\page\index\templates\sections\resume.html:28
+msgid "Senior Quality Assurance Engineer"
+msgstr "Ingeniero Senior de Aseguramiento de Calidad"
+
+#: .\apps\project\page\index\templates\sections\resume.html:29
+msgid "Dec 2021 - Aug 2023"
+msgstr "Dic 2021 - Ago 2023"
+
+#: .\apps\project\page\index\templates\sections\resume.html:31
+msgid ""
+"\n"
+"              Lead the creation of an automation framework on the banking "
+"software\n"
+"              in C# with Selenium and POM design pattern that contains all "
+"the\n"
+"              specifications required for the projects to be able to "
+"standardize\n"
+"              automation testing (mobile, web and API) and automate the "
+"happy path\n"
+"              tests, regression tests, negative tests, end-to-end testing, "
+"and\n"
+"              others.\n"
+"            "
+msgstr ""
+"\n"
+"Liderar la creación de un framework de automatización del software bancario "
+"en C# con Selenium y patrón de diseño POM que contenga todas las "
+"especificaciones requeridas para que los proyectos puedan estandarizar las "
+"pruebas de automatización (móvil, web y API) y automatizar las pruebas de "
+"happy path, regresión, pruebas, pruebas negativas, pruebas de extremo a "
+"extremo y otros."
+
+#: .\apps\project\page\index\templates\sections\resume.html:41
+#: .\apps\project\page\index\templates\sections\resume.html:330
+msgid "QA Automation"
+msgstr "Automatización de control de calidad"
+
+#: .\apps\project\page\index\templates\sections\resume.html:44
+msgid ""
+"\n"
+"                  Lead the creation of an automation framework on the "
+"banking\n"
+"                  software in C# with Selenium and POM design pattern that\n"
+"                  contains all the specifications required for the projects "
+"to be\n"
+"                  able to standardize automation testing (mobile, web and "
+"API) and\n"
+"                  automate the happy path tests, regression tests, negative "
+"tests,\n"
+"                  end-to-end testing, and others.\n"
+"                "
+msgstr ""
+"\n"
+"Liderar la creación de un framework de automatización del software bancario "
+"en C# con Selenium y patrón de diseño POM que contenga todas las "
+"especificaciones requeridas para que los proyectos puedan estandarizar las "
+"pruebas de automatización (móvil, web y API) y automatizar las pruebas de "
+"camino feliz, regresión. pruebas, pruebas negativas, pruebas de extremo a "
+"extremo y otros."
+
+#: .\apps\project\page\index\templates\sections\resume.html:56
+msgid "API Testing"
+msgstr "Pruebas API"
+
+#: .\apps\project\page\index\templates\sections\resume.html:59
+msgid ""
+"\n"
+"                  Conducted API testing on both projects to ensure that the\n"
+"                  different components of the system were integrated and "
+"worked\n"
+"                  together seamlessly.\n"
+"                "
+msgstr ""
+"\n"
+"Realicé pruebas de API en ambos proyectos para garantizar que los diferentes "
+"componentes del sistema estuvieran integrados y funcionaran juntos a la "
+"perfección."
+
+#: .\apps\project\page\index\templates\sections\resume.html:68
+msgid "Manual and Functional Testing"
+msgstr "Pruebas manuales y funcionales"
+
+#: .\apps\project\page\index\templates\sections\resume.html:71
+msgid ""
+"\n"
+"                  Conducted manual testing on both projects to ensure that "
+"the\n"
+"                  requirements and specifications defined in the user "
+"stories (HU)\n"
+"                  were met, focusing mainly on the risk matrix following the "
+"test\n"
+"                  plan.\n"
+"                "
+msgstr ""
+"\n"
+"Realicé pruebas manuales en ambos proyectos para asegurar que se cumplieran "
+"los requisitos y especificaciones definidas en las historias de usuario "
+"(HU), enfocándome principalmente en la matriz de riesgos siguiendo el plan "
+"de pruebas."
+
+#: .\apps\project\page\index\templates\sections\resume.html:86
+msgid "Full Stack Developer and QA Engineer"
+msgstr "Desarrollador Fullstack e ingeniero de control de calidad"
+
+#: .\apps\project\page\index\templates\sections\resume.html:87
+msgid "Feb 2018 - Dec 2021"
+msgstr "Feb 2018 - Dic 2021"
+
+#: .\apps\project\page\index\templates\sections\resume.html:89
+msgid "CRM and ERP"
+msgstr "CRM y ERP"
+
+#: .\apps\project\page\index\templates\sections\resume.html:92
+msgid ""
+"\n"
+"                  Implemented a CRM system for an educational institution "
+"that\n"
+"                  integrates data from Moodle and WordPress platforms to "
+"provide a\n"
+"                  centralized and organized view of students, course "
+"information,\n"
+"                  ERP and CRM.\n"
+"                "
+msgstr ""
+"\n"
+"Implementé un sistema CRM para la institución educativa que integra datos de "
+"las plataformas Moodle y WordPress para brindar una vista centralizada y "
+"organizada de los estudiantes, información de los cursos, ERP y CRM."
+
+#: .\apps\project\page\index\templates\sections\resume.html:102
+msgid "Moodle (E-Learning Education Platform)"
+msgstr "Moodle (Plataforma educativa de aprendizaje virtual)"
+
+#: .\apps\project\page\index\templates\sections\resume.html:105
+msgid ""
+"\n"
+"                  Used Moodle to create a virtual education platform, "
+"including\n"
+"                  course management, enrollment tracking, and reporting "
+"features.\n"
+"                "
+msgstr ""
+"\n"
+"Utilicé Moodle para crear una plataforma de educación virtual, que incluye "
+"funciones de gestión de cursos, seguimiento de inscripciones y generación de "
+"informes."
+
+#: .\apps\project\page\index\templates\sections\resume.html:113
+msgid "Sentinel (Medical Qualification Software)"
+msgstr "Sentinel (software de calificación médica)"
+
+#: .\apps\project\page\index\templates\sections\resume.html:116
+msgid ""
+"\n"
+"                  Developed medical qualification software using natural "
+"language\n"
+"                  processing (NLP), support vector machines (SVM), and "
+"decision\n"
+"                  tree algorithms to determine the origin qualification of "
+"medical\n"
+"                  conditions.\n"
+"                "
+msgstr ""
+"\n"
+"Desarrollé el software de calificación médica utilizando procesamiento de "
+"lenguaje natural (NLP), máquinas de vectores de soporte (SVM) y algoritmos "
+"de árbol de decisión para determinar la calificación de origen de "
+"condiciones médicas."
+
+#: .\apps\project\page\index\templates\sections\resume.html:131
+msgid "Computer Engineer (Student)"
+msgstr "Ingeniería Informática (Estudiante)"
+
+#: .\apps\project\page\index\templates\sections\resume.html:133
+msgid "2021 - Now"
+msgstr "2021 - Ahora"
+
+#: .\apps\project\page\index\templates\sections\resume.html:137
+msgid "Systems Engineer (Student)"
+msgstr "Ingeniería de Sistemas (Estudiante)"
+
+#: .\apps\project\page\index\templates\sections\resume.html:169
+msgid "Python University with Frameworks Django, Flask, etc."
+msgstr " Universidad Python - De Cero a Experto Más Completo"
+
+#: .\apps\project\page\index\templates\sections\resume.html:178
+msgid "Python 3 Master Course: Learn from Scratch."
+msgstr "Curso Maestro de Python: De Cero a Programador Todoterreno"
+
+#: .\apps\project\page\index\templates\sections\resume.html:187
+msgid "Django with React | An Ecommerce Website"
+msgstr "Django con React | Ecommerce"
+
+#: .\apps\project\page\index\templates\sections\resume.html:196
+msgid "Course Django and Django rest framework from basic to professional"
+msgstr "Curso Django y Django rest framework de básico a profesional"
+
+#: .\apps\project\page\index\templates\sections\resume.html:205
+msgid "Purchase and Billing System with Python using Django LTS"
+msgstr "Sistema de Compra y Facturación con Python usando Django"
+
+#: .\apps\project\page\index\templates\sections\resume.html:214
+msgid "Django Hands-On Course: Backend Web Development with Python"
+msgstr "Curso Práctico de Django: Desarrollo Web Backend con Python"
+
+#: .\apps\project\page\index\templates\sections\resume.html:226
+msgid "Python for non-mathematicians: From 0 to facial recognition"
+msgstr "Python para no matemáticos: De 0 hasta reconocimiento facial"
+
+#: .\apps\project\page\index\templates\sections\resume.html:235
+msgid "Python-Introduction to Data Science and Machine learning A-Z"
+msgstr "Python-Introduction to Data Science and Machine learning A-Z"
+
+#: .\apps\project\page\index\templates\sections\resume.html:262
+msgid "Machine Learning with Python"
+msgstr "Python y Machine Learning: Crea Soluciones Innovadoras"
+
+#: .\apps\project\page\index\templates\sections\resume.html:274
+msgid "Java University - From Zero to Expert - More Complete"
+msgstr "Universidad Java - De Cero a Experto - Más Completo"
+
+#: .\apps\project\page\index\templates\sections\resume.html:286
+msgid "JavaScript University - From Zero to JavaScript Expert"
+msgstr "Universidad JavaScript - De Cero a Experto JavaScript!"
+
+#: .\apps\project\page\index\templates\sections\resume.html:295
+msgid "Watched"
+msgstr "Videos"
+
+#: .\apps\project\page\index\templates\sections\resume.html:305
+msgid "WEB Automation – Serenity BDD | cucumber | Screen Play | Java"
+msgstr "Automatización - Serenity BDD | cucumber | Screen Play | Java"
+
+#: .\apps\project\page\index\templates\sections\resume.html:314
+msgid "Selenium with Python Behave (BDD)"
+msgstr "Selenium con Python Behave (BDD)"
+
+#: .\apps\project\page\index\templates\sections\resume.html:323
+msgid "Python with Selenium Course"
+msgstr "Curso de Python con Selenium"
+
+#: .\apps\project\page\index\templates\sections\resume.html:332
+msgid "Selenium with Java and Cucumber: The definitive Course"
+msgstr "Selenium con Java y Cucumber: El curso definitivo"
+
+#: .\apps\project\page\index\templates\sections\resume.html:333
+msgid "QA Automation with Serenity Course - From novice to expert!"
+msgstr ""
+"Curso de automatización del aseguramiento de la calidad con Serenity - De "
+"novato a experto!"
+
+#: .\apps\project\page\index\templates\sections\resume.html:334
+msgid "UI Automation with Serenity BDD (Selenium, Cucumber, Junit)"
+msgstr "Automatización de UI con Serenity BDD (Selenium, Cucumber, Junit)"
+
+#: .\apps\project\page\index\templates\sections\skills.html:5
+msgid "Skills"
+msgstr "Habilidades"
+
+#: .\apps\project\page\index\templates\sections\skills.html:7
+msgid "Platforms, Technologies, Languages"
+msgstr "Plataformas, Tecnologías, Lenguajes "
+
+#: .\apps\project\page\index\templates\sections\skills.html:150
+msgid "English (B2)"
+msgstr "Ingles (B2)"
+
+#~ msgid "Spanish"
+#~ msgstr "Español"
+
+#~| msgid "English (B2)"
+#~ msgid "English"
+#~ msgstr "Ingles"

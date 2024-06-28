@@ -13,7 +13,7 @@ class TimeStampedModel(models.Model):
     history = AuditlogHistoryField()
 
     language = models.CharField(
-        _("idioma"),
+        _("language"),
         max_length=50,
         default="es",
         blank=True,
@@ -21,24 +21,24 @@ class TimeStampedModel(models.Model):
     )
 
     created = models.DateTimeField(
-        _('creado'),
+        _('created'),
         default=timezone.now,
         editable=False
     )
 
     updated = models.DateTimeField(
-        _('actualizado'),
+        _('updated'),
         auto_now=True,
         editable=False
     )
 
     is_active = models.BooleanField(
-        _("esta activo"),
+        _("is active"),
         default=True
     )
 
     default_order = models.PositiveIntegerField(
-        _('prioridad'),
+        _('priority'),
         default=1,
         blank=True,
         null=True
@@ -51,7 +51,7 @@ class TimeStampedModel(models.Model):
 class RequestLogModel(TimeStampedModel):
     """A model to log requests."""
     requests = models.JSONField(
-        _("peticiones"),
+        _("requests"),
         blank=True,
         null=True,
         default=dict
@@ -79,5 +79,5 @@ class RequestLogModel(TimeStampedModel):
 
     class Meta:
         db_table = f'{utils_db_name}_requestlog'
-        verbose_name = _('Peticiones')
-        verbose_name_plural = _('Peticiones')
+        verbose_name = _('Request')
+        verbose_name_plural = _('Requests')

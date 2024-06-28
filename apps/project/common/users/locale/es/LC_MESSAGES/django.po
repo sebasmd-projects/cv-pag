@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-27 20:09-0500\n"
+"PO-Revision-Date: 2024-06-27 20:06-0500\n"
+"Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\apps\project\common\users\admin.py:35
+msgid "password"
+msgstr "contraseña"
+
+#: .\apps\project\common\users\admin.py:37
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user’s "
+"password, but you can change the password using <a href=\"{}\">this form</a>."
+msgstr ""
+"Las contraseñas sin procesar no se almacenan, por lo que no hay forma de ver "
+"la contraseña de este usuario, pero puede cambiarla usando <a href="
+"\"{}\">este formulario</a>."
+
+#: .\apps\project\common\users\admin.py:98
+msgid "User Information"
+msgstr "Información de Usuario"
+
+#: .\apps\project\common\users\admin.py:106
+msgid "Personal Information"
+msgstr "Información de Usuario"
+
+#: .\apps\project\common\users\admin.py:119
+msgid "Permissions"
+msgstr "Permisos"
+
+#: .\apps\project\common\users\admin.py:130
+msgid "Dates"
+msgstr "Fechas"
+
+#: .\apps\project\common\users\admin.py:139
+msgid "Priority"
+msgstr "Prioridad"
+
+#: .\apps\project\common\users\admin.py:155
+msgid "Names"
+msgstr "Nombres"
+
+#: .\apps\project\common\users\admin.py:156
+msgid "Age"
+msgstr "Edad"
+
+#: .\apps\project\common\users\models.py:27
+msgid "cell_phone"
+msgstr "celular"
+
+#: .\apps\project\common\users\models.py:34
+msgid "birthday"
+msgstr "cumpleaños"
+
+#: .\apps\project\common\users\models.py:47
+msgid "country code"
+msgstr "código de país"
+
+#: .\apps\project\common\users\models.py:72
+msgid "User"
+msgstr "Usuario"
+
+#: .\apps\project\common\users\models.py:73
+msgid "Users"
+msgstr "Usuarios"

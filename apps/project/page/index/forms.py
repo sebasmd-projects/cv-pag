@@ -3,15 +3,15 @@ import uuid
 from django import forms
 
 from .models import ContactModel
-
+from django.utils.translation import gettext_lazy as _
 
 class ContactForm(forms.ModelForm):
 
     names = forms.CharField(
         widget=forms.TextInput(
             attrs={
+                'placeholder': _('Names'),
                 'maxlength': 150,
-                'placeholder': 'Names',
                 'class': 'form-control',
                 'name': 'names'
             }
@@ -22,8 +22,8 @@ class ContactForm(forms.ModelForm):
     email = forms.EmailField(
         widget=forms.EmailInput(
             attrs={
+                'placeholder': _('Email'),
                 'maxlength': 254,
-                'placeholder': 'Email',
                 'class': 'form-control',
                 'name':'email'
             }
@@ -34,9 +34,9 @@ class ContactForm(forms.ModelForm):
     title = forms.CharField(
         widget=forms.TextInput(
             attrs={
+                'placeholder': _('Subject'),
                 'id': 'contact_title',
                 'maxlength': 150,
-                'placeholder': 'Subject',
                 'class': 'form-control'
             }
         ),
@@ -46,7 +46,7 @@ class ContactForm(forms.ModelForm):
     message = forms.CharField(
         widget=forms.Textarea(
             attrs={
-                'placeholder': 'Message',
+                'placeholder': _('Message'),
                 'class': 'form-control',
                 'name':'message',
                 'rows':'3'
