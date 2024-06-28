@@ -25,7 +25,6 @@ except:
 def robots_txt(request):
     lines = [
         "User-agent: *",
-        "Disallow: /*",
         "Disallow: /SETUP",
         "Disallow: /ENV",
         "Disallow: /PHPMYADMIN",
