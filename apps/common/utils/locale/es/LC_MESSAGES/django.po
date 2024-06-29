@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-27 23:48-0500\n"
+"POT-Creation-Date: 2024-06-28 19:43-0500\n"
 "PO-Revision-Date: 2024-06-27 20:00-0500\n"
 "Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,34 +79,34 @@ msgstr "Petición"
 msgid "Requests"
 msgstr "Peticiones"
 
-#: .\apps\common\utils\views.py:50
+#: .\apps\common\utils\views.py:49
 msgid "Error 400"
 msgstr "Error 400"
 
-#: .\apps\common\utils\views.py:51
+#: .\apps\common\utils\views.py:50
 msgid "Bad Request"
 msgstr "Solicitud incorrecta"
 
-#: .\apps\common\utils\views.py:66
+#: .\apps\common\utils\views.py:65
 msgid "Error 403"
 msgstr "Error 403"
 
-#: .\apps\common\utils\views.py:67
+#: .\apps\common\utils\views.py:66
 msgid "Prohibited Request"
 msgstr "Solicitud prohibida"
 
-#: .\apps\common\utils\views.py:82
+#: .\apps\common\utils\views.py:81
 msgid "Error 404"
 msgstr "Error 404"
 
-#: .\apps\common\utils\views.py:83
+#: .\apps\common\utils\views.py:82
 msgid "Page not found"
 msgstr "Página no encontrada"
 
-#: .\apps\common\utils\views.py:97
+#: .\apps\common\utils\views.py:96
 msgid "Error 500"
 msgstr "Error 500"
 
-#: .\apps\common\utils\views.py:98
+#: .\apps\common\utils\views.py:97
 msgid "Server error"
 msgstr "Error del servidor"
