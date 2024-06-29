@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-28 19:44-0500\n"
-"PO-Revision-Date: 2024-06-28 19:45-0500\n"
+"POT-Creation-Date: 2024-06-28 19:56-0500\n"
+"PO-Revision-Date: 2024-06-28 19:57-0500\n"
 "Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -87,12 +87,12 @@ msgid "Profesional Experience"
 msgstr "Experiencia Profesional"
 
 #: .\apps\project\page\index\templates\includes\header.html:46
-#: .\apps\project\page\index\templates\sections\resume.html:129
+#: .\apps\project\page\index\templates\sections\resume.html:135
 msgid "Education"
 msgstr "Educación"
 
 #: .\apps\project\page\index\templates\includes\header.html:47
-#: .\apps\project\page\index\templates\sections\resume.html:144
+#: .\apps\project\page\index\templates\sections\resume.html:150
 msgid "Certifications"
 msgstr "Certificaciones"
 
@@ -205,41 +205,59 @@ msgid "Developer, Quality Assurance, Freelancer"
 msgstr "Desarrollador, Asegurador de la Calidad, Freelancer"
 
 #: .\apps\project\page\index\templates\sections\resume.html:7
+#| msgid ""
+#| "\n"
+#| "        I am a web application developer with the Django framework of Python and Next.js of React. I have built content management applications, educational platforms, and implemented payment gateways. Additionally, I have experience in developing customer relationship management (CRM) systems, enterprise resource planning (ERP) systems, and residential management systems (RMS). I have also worked on third-party service integrations, enhancing the functionality and efficiency of the applications I develop.\n"
+#| "      "
 msgid ""
 "\n"
-"        I am a web application developer with the Django framework of Python and Next.js of React. I have built content management applications, educational platforms, and implemented payment gateways. Additionally, I have experience in developing customer relationship management (CRM) systems, enterprise resource planning (ERP) systems, and residential management systems (RMS). I have also worked on third-party service integrations, enhancing the functionality and efficiency of the applications I develop.\n"
+"        I am a web application developer with the Django framework of Python and Next.js of React.\n"
+"        I have built content management applications, educational platforms, and implemented payment gateways.\n"
+"        Additionally, I have experience in developing customer relationship management (CRM) systems,\n"
+"        enterprise resource planning (ERP) systems, and residential management systems (RMS).\n"
+"        I have also worked on third-party service integrations, enhancing the functionality and efficiency of the applications I develop.\n"
 "      "
 msgstr ""
 "\n"
 "Soy desarrollador de aplicaciones web con el framework Django de Python y Next.js de React. He construido aplicaciones de gestión de contenidos, plataformas educativas e implementado pasarelas de pago. Además, tengo experiencia en el desarrollo de sistemas de gestión de relaciones con clientes (CRM), sistemas de planificación de recursos empresariales (ERP) y sistemas de gestión residencial (RMS, por sus siglas en inglés). También he trabajado en la integración de servicios de terceros, mejorando la funcionalidad y la eficiencia de las aplicaciones que desarrollo."
 
-#: .\apps\project\page\index\templates\sections\resume.html:12
+#: .\apps\project\page\index\templates\sections\resume.html:16
+#| msgid ""
+#| "\n"
+#| "        I am an Automation Engineer and Quality Analyst with experience in the banking sector, using C#, Python, or Java along with Selenium and Appium. I have implemented CI/CD with Jenkins and Azure DevOps in both cases. As a Quality Analyst, I have a solid knowledge of ISTQB standards.\n"
+#| "      "
 msgid ""
 "\n"
-"        I am an Automation Engineer and Quality Analyst with experience in the banking sector, using C#, Python, or Java along with Selenium and Appium. I have implemented CI/CD with Jenkins and Azure DevOps in both cases. As a Quality Analyst, I have a solid knowledge of ISTQB standards.\n"
+"        I am an Automation Engineer and Quality Analyst with experience in the banking sector, using C#, Python, or Java along with Selenium and Appium.\n"
+"        I have implemented CI/CD with Jenkins and Azure DevOps. As a Quality Analyst, I have a solid knowledge of ISTQB standards.\n"
 "      "
 msgstr ""
 "\n"
-"I am an Automation Engineer and Quality Analyst with experience in the banking sector, using C#, Python, or Java along with Selenium and Appium. I have implemented CI/CD with Jenkins and Azure DevOps in both cases. As a Quality Analyst, I have a solid knowledge of ISTQB standards."
+"Soy Automatizador y Analista de Calidad con experiencia en el sector bancario, utilizando C#, Python o Java junto con Selenium y Appium. He implementado CI/CD con Jenkins y Azure DevOps. Como Analista de calidad tengo un sólido conocimiento de los estándares de la ISTQB. "
 
-#: .\apps\project\page\index\templates\sections\resume.html:17
+#: .\apps\project\page\index\templates\sections\resume.html:22
+#| msgid ""
+#| "\n"
+#| "        I am passionate about programming and enjoy implementing best development practices, working within the framework of agile methodologies. I like to be a leader, work in a team, and apply critical thinking to provide the best solutions for the company.\n"
+#| "      "
 msgid ""
 "\n"
-"        I am passionate about programming and enjoy implementing best development practices, working within the framework of agile methodologies. I like to be a leader, work in a team, and apply critical thinking to provide the best solutions for the company.\n"
+"        I am passionate about programming and enjoy implementing best development practices, working within the framework of agile methodologies.\n"
+"        I like to be a leader, work in a team, and apply critical thinking to provide the best solutions for the company.\n"
 "      "
 msgstr ""
 "\n"
 "Soy un apasionado por la programación y disfruto implementando las mejores prácticas de desarrollo, trabajando dentro del marco de metodologías ágiles. Me gusta ser líder, trabajar en equipo y aplicar un sentido crítico para ofrecer las mejores soluciones a la empresa."
 
-#: .\apps\project\page\index\templates\sections\resume.html:28
+#: .\apps\project\page\index\templates\sections\resume.html:34
 msgid "Senior Quality Assurance Engineer"
 msgstr "Ingeniero Senior de Aseguramiento de Calidad"
 
-#: .\apps\project\page\index\templates\sections\resume.html:29
+#: .\apps\project\page\index\templates\sections\resume.html:35
 msgid "Dec 2021 - Aug 2023"
 msgstr "Dic 2021 - Ago 2023"
 
-#: .\apps\project\page\index\templates\sections\resume.html:31
+#: .\apps\project\page\index\templates\sections\resume.html:37
 msgid ""
 "\n"
 "              Lead the creation of an automation framework on the banking software\n"
@@ -253,12 +271,12 @@ msgstr ""
 "\n"
 "Liderar la creación de un framework de automatización del software bancario en C# con Selenium y patrón de diseño POM que contenga todas las especificaciones requeridas para que los proyectos puedan estandarizar las pruebas de automatización (móvil, web y API) y automatizar las pruebas de happy path, regresión, pruebas, pruebas negativas, pruebas de extremo a extremo y otros."
 
-#: .\apps\project\page\index\templates\sections\resume.html:41
-#: .\apps\project\page\index\templates\sections\resume.html:330
+#: .\apps\project\page\index\templates\sections\resume.html:47
+#: .\apps\project\page\index\templates\sections\resume.html:336
 msgid "QA Automation"
 msgstr "Automatización de control de calidad"
 
-#: .\apps\project\page\index\templates\sections\resume.html:44
+#: .\apps\project\page\index\templates\sections\resume.html:50
 msgid ""
 "\n"
 "                  Lead the creation of an automation framework on the banking\n"
@@ -272,11 +290,11 @@ msgstr ""
 "\n"
 "Liderar la creación de un framework de automatización del software bancario en C# con Selenium y patrón de diseño POM que contenga todas las especificaciones requeridas para que los proyectos puedan estandarizar las pruebas de automatización (móvil, web y API) y automatizar las pruebas de camino feliz, regresión. pruebas, pruebas negativas, pruebas de extremo a extremo y otros."
 
-#: .\apps\project\page\index\templates\sections\resume.html:56
+#: .\apps\project\page\index\templates\sections\resume.html:62
 msgid "API Testing"
 msgstr "Pruebas API"
 
-#: .\apps\project\page\index\templates\sections\resume.html:59
+#: .\apps\project\page\index\templates\sections\resume.html:65
 msgid ""
 "\n"
 "                  Conducted API testing on both projects to ensure that the\n"
@@ -287,11 +305,11 @@ msgstr ""
 "\n"
 "Realicé pruebas de API en ambos proyectos para garantizar que los diferentes componentes del sistema estuvieran integrados y funcionaran juntos a la perfección."
 
-#: .\apps\project\page\index\templates\sections\resume.html:68
+#: .\apps\project\page\index\templates\sections\resume.html:74
 msgid "Manual and Functional Testing"
 msgstr "Pruebas manuales y funcionales"
 
-#: .\apps\project\page\index\templates\sections\resume.html:71
+#: .\apps\project\page\index\templates\sections\resume.html:77
 msgid ""
 "\n"
 "                  Conducted manual testing on both projects to ensure that the\n"
@@ -303,19 +321,19 @@ msgstr ""
 "\n"
 "Realicé pruebas manuales en ambos proyectos para asegurar que se cumplieran los requisitos y especificaciones definidas en las historias de usuario (HU), enfocándome principalmente en la matriz de riesgos siguiendo el plan de pruebas."
 
-#: .\apps\project\page\index\templates\sections\resume.html:86
+#: .\apps\project\page\index\templates\sections\resume.html:92
 msgid "Full Stack Developer and QA Engineer"
 msgstr "Desarrollador Fullstack e ingeniero de control de calidad"
 
-#: .\apps\project\page\index\templates\sections\resume.html:87
+#: .\apps\project\page\index\templates\sections\resume.html:93
 msgid "Feb 2018 - Dec 2021"
 msgstr "Feb 2018 - Dic 2021"
 
-#: .\apps\project\page\index\templates\sections\resume.html:89
+#: .\apps\project\page\index\templates\sections\resume.html:95
 msgid "CRM and ERP"
 msgstr "CRM y ERP"
 
-#: .\apps\project\page\index\templates\sections\resume.html:92
+#: .\apps\project\page\index\templates\sections\resume.html:98
 msgid ""
 "\n"
 "                  Implemented a CRM system for an educational institution that\n"
@@ -327,11 +345,11 @@ msgstr ""
 "\n"
 "Implementé un sistema CRM para la institución educativa que integra datos de las plataformas Moodle y WordPress para brindar una vista centralizada y organizada de los estudiantes, información de los cursos, ERP y CRM."
 
-#: .\apps\project\page\index\templates\sections\resume.html:102
+#: .\apps\project\page\index\templates\sections\resume.html:108
 msgid "Moodle (E-Learning Education Platform)"
 msgstr "Moodle (Plataforma educativa de aprendizaje virtual)"
 
-#: .\apps\project\page\index\templates\sections\resume.html:105
+#: .\apps\project\page\index\templates\sections\resume.html:111
 msgid ""
 "\n"
 "                  Used Moodle to create a virtual education platform, including\n"
@@ -341,11 +359,11 @@ msgstr ""
 "\n"
 "Utilicé Moodle para crear una plataforma de educación virtual, que incluye funciones de gestión de cursos, seguimiento de inscripciones y generación de informes."
 
-#: .\apps\project\page\index\templates\sections\resume.html:113
+#: .\apps\project\page\index\templates\sections\resume.html:119
 msgid "Sentinel (Medical Qualification Software)"
 msgstr "Sentinel (software de calificación médica)"
 
-#: .\apps\project\page\index\templates\sections\resume.html:116
+#: .\apps\project\page\index\templates\sections\resume.html:122
 msgid ""
 "\n"
 "                  Developed medical qualification software using natural language\n"
@@ -357,89 +375,89 @@ msgstr ""
 "\n"
 "Desarrollé el software de calificación médica utilizando procesamiento de lenguaje natural (NLP), máquinas de vectores de soporte (SVM) y algoritmos de árbol de decisión para determinar la calificación de origen de condiciones médicas."
 
-#: .\apps\project\page\index\templates\sections\resume.html:131
+#: .\apps\project\page\index\templates\sections\resume.html:137
 msgid "Computer Engineer (Student)"
 msgstr "Ingeniería Informática (Estudiante)"
 
-#: .\apps\project\page\index\templates\sections\resume.html:133
+#: .\apps\project\page\index\templates\sections\resume.html:139
 msgid "2021 - Now"
 msgstr "2021 - Ahora"
 
-#: .\apps\project\page\index\templates\sections\resume.html:137
+#: .\apps\project\page\index\templates\sections\resume.html:143
 msgid "Systems Engineer (Student)"
 msgstr "Ingeniería de Sistemas (Estudiante)"
 
-#: .\apps\project\page\index\templates\sections\resume.html:169
+#: .\apps\project\page\index\templates\sections\resume.html:175
 msgid "Python University with Frameworks Django, Flask, etc."
 msgstr " Universidad Python - De Cero a Experto Más Completo"
 
-#: .\apps\project\page\index\templates\sections\resume.html:178
+#: .\apps\project\page\index\templates\sections\resume.html:184
 msgid "Python 3 Master Course: Learn from Scratch."
 msgstr "Curso Maestro de Python: De Cero a Programador Todoterreno"
 
-#: .\apps\project\page\index\templates\sections\resume.html:187
+#: .\apps\project\page\index\templates\sections\resume.html:193
 msgid "Django with React | An Ecommerce Website"
 msgstr "Django con React | Ecommerce"
 
-#: .\apps\project\page\index\templates\sections\resume.html:196
+#: .\apps\project\page\index\templates\sections\resume.html:202
 msgid "Course Django and Django rest framework from basic to professional"
 msgstr "Curso Django y Django rest framework de básico a profesional"
 
-#: .\apps\project\page\index\templates\sections\resume.html:205
+#: .\apps\project\page\index\templates\sections\resume.html:211
 msgid "Purchase and Billing System with Python using Django LTS"
 msgstr "Sistema de Compra y Facturación con Python usando Django"
 
-#: .\apps\project\page\index\templates\sections\resume.html:214
+#: .\apps\project\page\index\templates\sections\resume.html:220
 msgid "Django Hands-On Course: Backend Web Development with Python"
 msgstr "Curso Práctico de Django: Desarrollo Web Backend con Python"
 
-#: .\apps\project\page\index\templates\sections\resume.html:226
+#: .\apps\project\page\index\templates\sections\resume.html:232
 msgid "Python for non-mathematicians: From 0 to facial recognition"
 msgstr "Python para no matemáticos: De 0 hasta reconocimiento facial"
 
-#: .\apps\project\page\index\templates\sections\resume.html:235
+#: .\apps\project\page\index\templates\sections\resume.html:241
 msgid "Python-Introduction to Data Science and Machine learning A-Z"
 msgstr "Python-Introduction to Data Science and Machine learning A-Z"
 
-#: .\apps\project\page\index\templates\sections\resume.html:262
+#: .\apps\project\page\index\templates\sections\resume.html:268
 msgid "Machine Learning with Python"
 msgstr "Python y Machine Learning: Crea Soluciones Innovadoras"
 
-#: .\apps\project\page\index\templates\sections\resume.html:274
+#: .\apps\project\page\index\templates\sections\resume.html:280
 msgid "Java University - From Zero to Expert - More Complete"
 msgstr "Universidad Java - De Cero a Experto - Más Completo"
 
-#: .\apps\project\page\index\templates\sections\resume.html:286
+#: .\apps\project\page\index\templates\sections\resume.html:292
 msgid "JavaScript University - From Zero to JavaScript Expert"
 msgstr "Universidad JavaScript - De Cero a Experto JavaScript!"
 
-#: .\apps\project\page\index\templates\sections\resume.html:295
+#: .\apps\project\page\index\templates\sections\resume.html:301
 msgid "Watched"
 msgstr "Videos"
 
-#: .\apps\project\page\index\templates\sections\resume.html:305
+#: .\apps\project\page\index\templates\sections\resume.html:311
 msgid "WEB Automation – Serenity BDD | cucumber | Screen Play | Java"
 msgstr "Automatización - Serenity BDD | cucumber | Screen Play | Java"
 
-#: .\apps\project\page\index\templates\sections\resume.html:314
+#: .\apps\project\page\index\templates\sections\resume.html:320
 msgid "Selenium with Python Behave (BDD)"
 msgstr "Selenium con Python Behave (BDD)"
 
-#: .\apps\project\page\index\templates\sections\resume.html:323
+#: .\apps\project\page\index\templates\sections\resume.html:329
 msgid "Python with Selenium Course"
 msgstr "Curso de Python con Selenium"
 
-#: .\apps\project\page\index\templates\sections\resume.html:332
+#: .\apps\project\page\index\templates\sections\resume.html:338
 msgid "Selenium with Java and Cucumber: The definitive Course"
 msgstr "Selenium con Java y Cucumber: El curso definitivo"
 
-#: .\apps\project\page\index\templates\sections\resume.html:333
+#: .\apps\project\page\index\templates\sections\resume.html:339
 msgid "QA Automation with Serenity Course - From novice to expert!"
 msgstr ""
 "Curso de automatización del aseguramiento de la calidad con Serenity - De "
 "novato a experto!"
 
-#: .\apps\project\page\index\templates\sections\resume.html:334
+#: .\apps\project\page\index\templates\sections\resume.html:340
 msgid "UI Automation with Serenity BDD (Selenium, Cucumber, Junit)"
 msgstr "Automatización de UI con Serenity BDD (Selenium, Cucumber, Junit)"
 
