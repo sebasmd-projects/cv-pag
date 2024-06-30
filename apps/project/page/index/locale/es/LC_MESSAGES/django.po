@@ -9,7 +9,11 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-28 21:17-0500\n"
+<<<<<<< HEAD
+"PO-Revision-Date: 2024-06-28 21:20-0500\n"
+=======
 "PO-Revision-Date: 2024-06-28 21:21-0500\n"
+>>>>>>> refs/remotes/origin/master
 "Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -202,7 +206,11 @@ msgstr "Soy"
 
 #: .\apps\project\page\index\templates\sections\hero.html:14
 msgid "Developer, Quality Assurance, Freelancer"
+<<<<<<< HEAD
+msgstr "Desarrollador, Analista de la Calidad, Freelancer"
+=======
 msgstr "Desarrollador, Analista de Calidad, Freelancer"
+>>>>>>> refs/remotes/origin/master
 
 #: .\apps\project\page\index\templates\sections\resume.html:7
 msgid ""
