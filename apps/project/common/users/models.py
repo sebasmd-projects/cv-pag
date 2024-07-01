@@ -5,7 +5,7 @@ from app_core import get_app_from_path
 from auditlog.registry import auditlog
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
-from django.db.models import BooleanField, CharField, DateField, UUIDField
+from django.db.models import CharField, DateField, UUIDField
 from django.utils.translation import gettext_lazy as _
 
 TimeStampedModel = get_app_from_path(
@@ -68,7 +68,7 @@ class UserModel(TimeStampedModel, AbstractUser):
         return f"{self.get_full_name()}"
 
     class Meta:
-        db_table = 'apps_project_common_user'
+        db_table = 'apps_project_common_users_user'
         verbose_name = _('User')
         verbose_name_plural = _('Users')
 

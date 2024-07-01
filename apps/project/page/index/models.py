@@ -40,6 +40,6 @@ class ContactModel(TimeStampedModel):
         return self.title
     
     class Meta:
-        db_table = 'apps_project_page_contact'
+        db_table = 'apps_project_page_index_contact'
         verbose_name = 'Contact Form'
         verbose_name_plural = 'Contact Forms'
