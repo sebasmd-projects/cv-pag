@@ -38,3 +38,8 @@ class ContactModel(TimeStampedModel):
 
     def __str__(self):
         return self.title
+    
+    class Meta:
+        db_table = 'apps_project_page_contact'
+        verbose_name = 'Contact Form'
+        verbose_name_plural = 'Contact Forms'
