@@ -10,10 +10,12 @@ from apps.project.page.index.sitemaps import IndexViewSitemap
 admin_url = settings.ADMIN_URL
 
 custom_apps = settings.CUSTOM_APPS
+spirit_apps = settings.SPIRIT_APPS
 
 utils_path = settings.UTILS_PATH
 
 apps_urls = [path('', include(f'{app}.urls')) for app in custom_apps]
+apps_urls += [path('spirit/', include(f'{app}.urls')) for app in spirit_apps]
 
 apps_sitemaps = {
     'home': IndexViewSitemap

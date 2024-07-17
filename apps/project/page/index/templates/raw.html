@@ -2,15 +2,18 @@
 <html lang="{{ LANGUAGE_CODE }}">
     <head>
         {% block meta %}{% endblock meta %}
+        {% block aditional_meta %}{% endblock aditional_meta %}
         <title>{% block title %}{% endblock title %}</title>
         {% block favicons %}{% endblock favicons %}
         {% block fonts %}{% endblock fonts %}
         {% block css %}{% endblock css %}
         {% block main_css %}{% endblock main_css %}
         {% block aditional_css %}{% endblock aditional_css %}
+        {% block license %}
         <!-- =======================================================
         * License: https://bootstrapmade.com/license/
         ======================================================== -->
+        {% endblock license %}
     </head>
     <body class="{% block body_css %}{% endblock body_css %}">
         {% block header %}{% endblock header %}

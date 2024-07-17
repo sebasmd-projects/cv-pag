@@ -1,8 +1,8 @@
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
 from django.utils.translation import gettext_lazy as _
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -46,13 +46,24 @@ CUSTOM_APPS = [
     'apps.project.page.index',
 ]
 
+SPIRIT_APPS = [
+    'apps.project.spirit.spirit_core',
+    'apps.project.spirit.ramptwo',
+    'apps.project.spirit.rampone',
+    'apps.project.spirit.pbe',
+    'apps.project.spirit.door',
+    'apps.project.spirit.baggage'
+]
+
+ALL_CUSTOM_APPS = CUSTOM_APPS + SPIRIT_APPS
+
 LOCALE_PATHS = [
-    app_path / 'locale' for app_path in [BASE_DIR / app.replace('.', '/') for app in CUSTOM_APPS]
+    app_path / 'locale' for app_path in [BASE_DIR / app.replace('.', '/') for app in ALL_CUSTOM_APPS]
 ]
 
 LOCALE_PATHS.append(str(BASE_DIR / 'app_core' / 'locale'))
 
-INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + CUSTOM_APPS
+INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + ALL_CUSTOM_APPS
 
 UTILS_PATH = 'apps.common.utils'
 
