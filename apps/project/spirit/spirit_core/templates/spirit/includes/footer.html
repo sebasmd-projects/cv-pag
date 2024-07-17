@@ -5,9 +5,13 @@
     <div class="row">
       <div class="col-md-6 small">&copy; <a href="https://sebasmoralesd.com">Sebastián Morales</a> {% now 'Y' %}.</div>
       <div class="col-md-6 text-md-end small">
-        <a href="/spirit">{% trans 'Privacy Policy' %}</a>
+        <a href="{% url 'spirit_core:index' %}">
+          {% trans 'Privacy Policy' %}
+        </a>
         &middot;
-        <a href="/spirit">{% trans 'Terms &amp; Conditions' %}</a>
+        <a href="{% url 'spirit_core:index' %}">
+          {% trans 'Terms &amp; Conditions' %}
+        </a>
       </div>
     </div>
   </div>

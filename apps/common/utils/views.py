@@ -111,6 +111,7 @@ def set_language(request):
     else:
         return redirect(request.META.get('HTTP_REFERER'))
 
+
 class DecoratedTokenObtainPairView(TokenObtainPairView):
     @swagger_auto_schema(
         responses={

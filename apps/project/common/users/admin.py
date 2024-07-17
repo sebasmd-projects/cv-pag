@@ -49,6 +49,7 @@ class UserAdminForm(forms.ModelForm):
 class UserModelAdmin(UserAdmin, ImportExportActionModelAdmin):
     search_fields = (
         'id',
+        'employee_id',
         'username',
         'email',
         'cell_phone',
@@ -64,6 +65,7 @@ class UserModelAdmin(UserAdmin, ImportExportActionModelAdmin):
 
     list_display = (
         'get_full_name',
+        'employee_id',
         'username',
         'email',
         'cell_phone',
@@ -73,6 +75,7 @@ class UserModelAdmin(UserAdmin, ImportExportActionModelAdmin):
 
     list_display_links = (
         'get_full_name',
+        'employee_id',
         'username',
         'email',
     )
@@ -98,7 +101,8 @@ class UserModelAdmin(UserAdmin, ImportExportActionModelAdmin):
             _('User Information'), {
                 'fields': (
                     'username',
-                    'password'
+                    'password',
+                    'employee_id'
                 )
             }
         ),

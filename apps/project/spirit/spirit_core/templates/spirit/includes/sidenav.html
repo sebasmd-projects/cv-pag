@@ -3,15 +3,15 @@
 <nav class="sidenav shadow-right sidenav-light">
     <div class="sidenav-menu">
         <div class="nav accordion" id="accordionSidenav">
-            <div class="sidenav-menu-heading d-sm-none">Account</div>
+            <div class="sidenav-menu-heading d-sm-none">{% trans 'Account' %}</div>
             <a class="nav-link d-sm-none" href="#!">
                 <div class="nav-link-icon text-black"><i data-feather="bell"></i></div>
-                Alerts
+                {% trans 'Alerts' %}
                 <span class="badge bg-warning-soft text-warning ms-auto">4 New!</span>
             </a>
             <a class="nav-link d-sm-none" href="#!">
                 <div class="nav-link-icon text-success"><i data-feather="mail"></i></div>
-                Messages
+                {% trans 'Messages' %}
                 <span class="badge bg-success-soft text-success ms-auto">2 New!</span>
             </a>
 
@@ -25,74 +25,74 @@
             </a>
             <div class="collapse" id="collapsePBE" data-bs-parent="#accordionSidenav">
                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                    <a class="nav-link" href="/spirit/pbe#pbe-checlist">CheckList</a>
-                    <a class="nav-link" href="/spirit/pbe#pbe-activities">Activities</a>
-                    <a class="nav-link" href="/spirit/pbe#pbe-data-sheet">Data Sheet</a>
+                    <a class="nav-link" href="{% url 'pbe:pbe' %}#pbe-checlist">CheckList</a>
+                    <a class="nav-link" href="{% url 'pbe:pbe' %}#pbe-activities">{% trans 'Activities' %}</a>
+                    <a class="nav-link" href="{% url 'pbe:pbe' %}#pbe-data-sheet">{% trans 'Data Sheet' %}</a>
                 </nav>
             </div>
             <!-- Baggage -->
             <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseBaggage" aria-expanded="false" aria-controls="collapseDashboards">
                 <div class="nav-link-icon text-cyan"><i data-feather="briefcase"></i></div>
-                Baggage
+                {% trans 'Baggage' %}
                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
             <div class="collapse" id="collapseBaggage" data-bs-parent="#accordionSidenav">
                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                    <a class="nav-link" href="/spirit/baggage#baggage-checlist">CheckList</a>
-                    <a class="nav-link" href="/spirit/baggage#baggage-activities">Activities</a>
-                    <a class="nav-link" href="/spirit/baggage#baggage-data-sheet">Data Sheet</a>
+                    <a class="nav-link" href="{% url 'baggage:baggage' %}#baggage-checlist">CheckList</a>
+                    <a class="nav-link" href="{% url 'baggage:baggage' %}#baggage-activities">{% trans 'Activities' %}</a>
+                    <a class="nav-link" href="{% url 'baggage:baggage' %}#baggage-data-sheet">{% trans 'Data Sheet' %}</a>
                 </nav>
             </div>
             <!-- Door -->
             <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseDoor" aria-expanded="false" aria-controls="collapseDashboards">
                 <div class="nav-link-icon text-black"><i data-feather="columns"></i></div>
-                Door
+                {% trans 'Door' %}
                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
             <div class="collapse" id="collapseDoor" data-bs-parent="#accordionSidenav">
                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                    <a class="nav-link" href="/spirit/door#door-checlist">CheckList</a>
-                    <a class="nav-link" href="/spirit/door#door-activities">Activities</a>
-                    <a class="nav-link" href="/spirit/door#door-data-sheet">Data Sheet</a>
+                    <a class="nav-link" href="{% url 'door:door' %}#door-checlist">CheckList</a>
+                    <a class="nav-link" href="{% url 'door:door' %}#door-activities">{% trans 'Activities' %}</a>
+                    <a class="nav-link" href="{% url 'door:door' %}#door-data-sheet">{% trans 'Data Sheet' %}</a>
                 </nav>
             </div>
             <!-- Ramp ONE -->
             <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseRampONE" aria-expanded="false" aria-controls="collapseDashboards">
                 <div class="nav-link-icon text-teal"><i data-feather="fast-forward"></i></div>
-                Ramp ONE
+                {% trans 'Ramp ONE' %}
                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
             <div class="collapse" id="collapseRampONE" data-bs-parent="#accordionSidenav">
                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                    <a class="nav-link" href="/spirit/rampone#rampone-checlist">CheckList</a>
-                    <a class="nav-link" href="/spirit/rampone#rampone-activities">Activities</a>
-                    <a class="nav-link" href="/spirit/rampone#rampone-data-sheet">Data Sheet</a>
+                    <a class="nav-link" href="{% url 'rampone:rampone' %}#rampone-checlist">CheckList</a>
+                    <a class="nav-link" href="{% url 'rampone:rampone' %}#rampone-activities">{% trans 'Activities' %}</a>
+                    <a class="nav-link" href="{% url 'rampone:rampone' %}#rampone-data-sheet">{% trans 'Data Sheet' %}</a>
                 </nav>
             </div>
             <!-- Ramp TWO -->
             <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseRampTWO" aria-expanded="false" aria-controls="collapseDashboards">
                 <div class="nav-link-icon text-yellow"><i data-feather="fast-forward"></i></div>
-                Ramp TWO
+                {% trans 'Ramp TWO' %}
                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
             <div class="collapse" id="collapseRampTWO" data-bs-parent="#accordionSidenav">
                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                    <a class="nav-link" href="/spirit/ramptwo#ramptwo-checlist">CheckList</a>
-                    <a class="nav-link" href="/spirit/ramptwo#ramptwo-activities">Activities</a>
-                    <a class="nav-link" href="/spirit/ramptwo#ramptwo-data-sheet">Data Sheet</a>
+                    <a class="nav-link" href="{% url 'ramptwo:ramptwo' %}#ramptwo-checlist">CheckList</a>
+                    <a class="nav-link" href="{% url 'ramptwo:ramptwo' %}#ramptwo-activities">{% trans 'Activities' %}</a>
+                    <a class="nav-link" href="{% url 'ramptwo:ramptwo' %}#ramptwo-data-sheet">{% trans 'Data Sheet' %}</a>
                 </nav>
             </div>
 
             <!-- Sidenav Heading (Custom)-->
-            <div class="sidenav-menu-heading">Account</div>
+            <div class="sidenav-menu-heading">{% trans 'Account' %}</div>
             <!-- Account -->
             <a class="nav-link" href="javascript:void(0);">
                 <div class="nav-link-icon text-secondary"><i data-feather="user"></i></div>
-                Profile
+                {% trans 'Profile' %}
             </a>
             <a class="nav-link" href="javascript:void(0);">
                 <div class="nav-link-icon text-primary"><i data-feather="shield"></i></div>
-                Security
+                {% trans 'Security' %}
             </a>
         </div>
     </div>
@@ -101,7 +101,7 @@
     {% if user.is_authenticated %}
     <div class="sidenav-footer">
         <div class="sidenav-footer-content">
-            <div class="sidenav-footer-subtitle">Logged in as:</div>
+            <div class="sidenav-footer-subtitle">{% trans 'Logged in as:' %}</div>
             <div class="sidenav-footer-title">{{user.get_full_name}}</div>
         </div>
     </div>

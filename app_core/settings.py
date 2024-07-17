@@ -122,6 +122,10 @@ DATABASES = {
     }
 }
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+SESSION_COOKIE_AGE = 7200
+
 AUTH_USER_MODEL = 'users.UserModel'
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -133,7 +137,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
-    f'{UTILS_PATH}.backend.EmailOrUsernameModelBackend',
+    f'{UTILS_PATH}.backend.EmailUsernameEmployeeIDModelBackend',
 ]
 
 PASSWORD_HASHERS = [
@@ -235,6 +239,7 @@ customColorPalette = [
         'label': 'Blue'
     },
 ]
+
 CKEDITOR_5_CONFIGS = {
     'default': {
         'toolbar': [
@@ -258,3 +263,5 @@ CKEDITOR_5_CONFIGS = {
 }
 
 CKEDITOR_5_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
+SPIRIT_PERMISSION_GROUP_NAME = os.getenv('SPIRIT_PERMISSION_GROUP_NAME')

@@ -148,10 +148,18 @@
                     <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
                     Account
                 </a>
-                <a class="dropdown-item" href="#!">
+                <a class="dropdown-item" href="{% url 'spirit_core:logout' %}">
                     <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
                     Logout
                 </a>
+                
+                {% if user.is_staff %}
+                    <a class="dropdown-item" href="{% url 'admin:index' %}">
+                        <div class="dropdown-item-icon"><i data-feather="tool"></i></div>
+                        ADMIN
+                    </a>
+                {% endif %}
+                    
             </div>
         </li>
     </ul>
