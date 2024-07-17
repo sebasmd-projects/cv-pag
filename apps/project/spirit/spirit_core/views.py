@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView, edit
 
-# Create your views here.
+
+class SpiritIndexTemplateView(TemplateView):
+    template_name = 'spirit/spirit_index.html'

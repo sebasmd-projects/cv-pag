@@ -1,1 +1,26 @@
-<h1>RAMP ONE</h1>
+{% extends 'spirit_core.html' %}
+
+{% load static i18n %}
+
+{% block aditional_meta %}
+    {% if LANGUAGE_CODE == 'es' %}
+        <meta name="description" content="Sebastián Morales - Guías, Checklist y otros para Agente Calificado SPIRIT en la posición de rampa uno">
+        <meta name="keywords" content="Sebastián Morales, Spirit, Airline, MDE, Longport">
+    {% else %}
+        <meta name="description" content="Sebastián Morales - Guides, Checklist and others for Qualified Agent SPIRIT on the position of ramp one">
+        <meta name="keywords" content="Sebastian Morales, Spirit, Airline, MDE, Longport">
+    {% endif %}
+{% endblock aditional_meta %}
+
+{% block title %}
+    {% trans 'Sebastian Morales | Spirit | Ramp One' %}
+{% endblock title %}
+
+
+{% block main_header %}
+    {% include 'rampone/includes/header.html' %}
+{% endblock main_header %}
+
+{% block content %}
+    {% include 'rampone/partials/content.html' %}
+{% endblock content %}

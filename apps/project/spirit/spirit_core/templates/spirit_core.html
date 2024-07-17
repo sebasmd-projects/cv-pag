@@ -9,6 +9,8 @@
     <meta name="author" content="Sebastian Morales | sebastian.morales@sebasmoralesd.com" />
 {% endblock meta %}
 
+{% block title %}Sebastián Morales | SPIRIT{% endblock title %}
+
 {% block favicons %}
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon/spirit/favicon.ico' %}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/spirit/apple-touch-icon.png' %}">
@@ -26,15 +28,38 @@
     <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 {% endblock main_css %}
 
+{% block aditional_header_js %}
+    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
+{% endblock aditional_header_js %}
+
 {% block body_css %}nav-fixed{% endblock body_css %}
 
-{% block footer %}
-    {% include 'spirit/includes/footer.html' %}
-{% endblock footer %}
+{% block main %}
+    {% include 'spirit/includes/top_navbar.html' %}
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            {% include 'spirit/includes/sidenav.html' %}
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <!-- Main header-->
+                {% block main_header %}{% endblock main_header %}
+                    
+                <!-- Main content-->
+                <div class="container-xl px-4">
+                    {% block content %}{% endblock content %}
+                </div>
+            </main>
 
-{% block js %}
+            {% include 'spirit/includes/footer.html' %}
+        </div>
+    </div>
+{% endblock main %}
+
+{% block aditional_js %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-{% endblock js %}
+{% endblock aditional_js %}
 
 {% block main_js %}
     <script src="{% static 'js/scripts.js' %}"></script>

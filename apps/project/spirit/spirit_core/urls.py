@@ -1,3 +1,13 @@
-from django.urls import include, path
-from .api import urls as api_urls
-urlpatterns = []
+from django.urls import path
+
+from .views import SpiritIndexTemplateView
+
+app_name = "spirit_core"
+
+urlpatterns = [
+    path(
+        '',
+        SpiritIndexTemplateView.as_view(),
+        name="index"
+    )
+]

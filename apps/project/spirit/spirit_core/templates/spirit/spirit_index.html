@@ -4,23 +4,24 @@
 
 {% block aditional_meta %}
     {% if LANGUAGE_CODE == 'es' %}
-        <meta name="description" content="Sebastián Morales - Guías, Checklist y otros para Agente Calificado SPIRIT en la posición de PBE">
+        <meta name="description" content="Sebastián Morales - Guías, Checklist y otros para Agente Calificado SPIRIT">
         <meta name="keywords" content="Sebastián Morales, Spirit, Airline, MDE, Longport">
     {% else %}
-        <meta name="description" content="Sebastián Morales - Guides, Checklist and others for Qualified Agent SPIRIT on the position of PBE">
+        <meta name="description" content="Sebastián Morales - Guides, Checklist and others for Qualified Agent SPIRIT">
         <meta name="keywords" content="Sebastian Morales, Spirit, Airline, MDE, Longport">
     {% endif %}
 {% endblock aditional_meta %}
 
 {% block title %}
-    {% trans 'Sebastian Morales | Spirit | PBE' %}
+        {% trans 'Sebastian Morales | Knowledge Base' %}
 {% endblock title %}
 
-
 {% block main_header %}
-    {% include 'pbe/includes/header.html' %}
+    {% include 'spirit/partials/header.html' %}
 {% endblock main_header %}
 
 {% block content %}
-    {% include 'pbe/partials/content.html' %}
+    {% include 'spirit/partials/categories.html' %}
+    {% include 'spirit/partials/topics.html' %}
 {% endblock content %}
+    
