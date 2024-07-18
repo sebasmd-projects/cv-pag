@@ -3,19 +3,19 @@
 {% load static i18n %}
 
 {% block aditional_meta %}
-    {% if LANGUAGE_CODE == 'es' %}
-        <meta name="description" content="Sebastián Morales - Guías, Checklist y otros para Agente Calificado SPIRIT en la posición de rampa uno">
-        <meta name="keywords" content="Sebastián Morales, Spirit, Airline, MDE, Longport">
-    {% else %}
-        <meta name="description" content="Sebastián Morales - Guides, Checklist and others for Qualified Agent SPIRIT on the position of ramp one">
-        <meta name="keywords" content="Sebastian Morales, Spirit, Airline, MDE, Longport">
-    {% endif %}
+    <meta name="description" content="{% trans 'Sebastián Morales - Guides, Checklist and others for Qualified Agent SPIRIT on the position of ramp one' %}">
+    <meta name="keywords" content="Sebastian Morales, Spirit, Airline, MDE, Longport">
 {% endblock aditional_meta %}
 
 {% block title %}
     {% trans 'Sebastian Morales | Spirit | Ramp One' %}
 {% endblock title %}
 
+{% block aditional_header_js %}
+    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+{% endblock aditional_header_js %}
 
 {% block main_header %}
     {% include 'rampone/includes/header.html' %}
@@ -24,3 +24,27 @@
 {% block content %}
     {% include 'rampone/partials/content.html' %}
 {% endblock content %}
+
+{% block aditional_js %}
+    <script>
+        $(document).ready(function(){
+            $('input[type="checkbox"]').change(function(){
+                if(this.checked) {
+                    var activity_id = $(this).val();
+                    $.ajax({
+                        type: "POST",
+                        url: "{% url 'rampone:rampone' %}",
+                        data: {
+                            'csrfmiddlewaretoken': '{{ csrf_token }}',
+                            'activity_id': activity_id
+                        },
+                        success: function(){
+                            location.reload();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+{% endblock aditional_js %}

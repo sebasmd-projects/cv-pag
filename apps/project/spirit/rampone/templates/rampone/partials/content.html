@@ -7,79 +7,17 @@
         CheckList
     </div>
     <div class="card-body">
-        <form>
-            <div class="row row-cols-3">
-                <div class="col">
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check 1</label>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                        <label class="form-check-label" for="exampleCheck2">Check 2</label>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                        <label class="form-check-label" for="exampleCheck3">Check 3</label>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck4">
-                        <label class="form-check-label" for="exampleCheck4">Check 4</label>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck5">
-                        <label class="form-check-label" for="exampleCheck5">Check 5</label>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck6">
-                        <label class="form-check-label" for="exampleCheck6">Check 6</label>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck7">
-                        <label class="form-check-label" for="exampleCheck7">Check 7</label>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck8">
-                        <label class="form-check-label" for="exampleCheck8">Check 8</label>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck9">
-                        <label class="form-check-label" for="exampleCheck9">Check 9</label>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck10">
-                        <label class="form-check-label" for="exampleCheck10">Check 10</label>
-                      </div>
-                </div>
-            </div>
+        <form method="post">
+            {% csrf_token %}
 
-            <div class="row">
-                <div class="col-6 d-grid gap-2">
-                    <button type="submit" class="btn btn-outline-success">{% trans 'Save' %}</button>
-                </div>
-                <div class="col-6 d-grid gap-2">
-                    <button type="reset" class="btn btn-outline-danger">{% trans 'Reset' %}</button>
-                </div>
-            </div>
-            
+            <ul class="list-group">
+                {% for activity in activities %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ activity.name }}
+                        <input type="checkbox" class="form-check-input" name="activity_id" value="{{ activity.id }}">
+                    </li>
+                {% endfor %}
+            </ul>
         </form>
     </div>
 </div>

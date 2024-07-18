@@ -1,13 +1,13 @@
 from django.urls import path
 
-from .views import RamponeTemplateView
+from .views import RampOneCheckListTemplateView
 
 app_name = 'rampone'
 
 urlpatterns = [
     path(
         'rampone',
-        RamponeTemplateView.as_view(),
+        RampOneCheckListTemplateView.as_view(),
         name='rampone'
     )
 ]
