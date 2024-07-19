@@ -69,6 +69,11 @@ UTILS_PATH = 'apps.common.utils'
 
 ADMIN_URL = os.getenv('DJANGO_ADMIN_URL')
 
+if DJANGO_SECURE_SSL_REDIRECT == 'True':
+    SECURE_SSL_REDIRECT = True
+else:
+    SECURE_SSL_REDIRECT = False
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
