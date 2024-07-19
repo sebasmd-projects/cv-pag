@@ -69,7 +69,7 @@ UTILS_PATH = 'apps.common.utils'
 
 ADMIN_URL = os.getenv('DJANGO_ADMIN_URL')
 
-if DJANGO_SECURE_SSL_REDIRECT == 'True':
+if os.getenv('DJANGO_SECURE_SSL_REDIRECT') == 'True':
     SECURE_SSL_REDIRECT = True
 else:
     SECURE_SSL_REDIRECT = False
