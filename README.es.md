@@ -28,6 +28,7 @@ DJANGO_EMAIL_PORT=email_port
 DJANGO_EMAIL_DEFAULT_FROM_EMAIL=email_default_from
 
 SPIRIT_PERMISSION_GROUP_NAME=spirit_custom_group_name
+SPIRIT_SUPERVISOR_PERMISSION_GROUP_NAME=spirti_supervisor
 ```
 
 ## Comandos
