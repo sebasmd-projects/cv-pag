@@ -40,12 +40,11 @@ class TimeStampedModel(models.Model):
     default_order = models.PositiveIntegerField(
         _('priority'),
         default=1,
-        blank=True,
-        null=True
     )
 
     class Meta:
         abstract = True
+        ordering = ['default_order']
 
 
 class RequestLogModel(TimeStampedModel):

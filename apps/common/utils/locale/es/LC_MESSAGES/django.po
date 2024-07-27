@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-28 19:43-0500\n"
+"POT-Creation-Date: 2024-07-27 00:00-0500\n"
 "PO-Revision-Date: 2024-06-27 20:00-0500\n"
 "Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,15 +67,15 @@ msgstr "está activo"
 msgid "priority"
 msgstr "prioridad"
 
-#: .\apps\common\utils\models.py:54
+#: .\apps\common\utils\models.py:53
 msgid "requests"
 msgstr "peticiones"
 
-#: .\apps\common\utils\models.py:82
+#: .\apps\common\utils\models.py:81
 msgid "Request"
 msgstr "Petición"
 
-#: .\apps\common\utils\models.py:83
+#: .\apps\common\utils\models.py:82
 msgid "Requests"
 msgstr "Peticiones"
 

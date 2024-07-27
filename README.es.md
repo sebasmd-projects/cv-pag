@@ -1,4 +1,7 @@
-Archivo .env
+# Readme
+
+## Archivo .env
+
 ```cmd
 DJANGO_ALLOWED_HOSTS=ejemplo.com,localhost,127.0.0.1,0.0.0.0
 DJANGO_SECRET_KEY='secret-django-key'
@@ -26,3 +29,11 @@ DJANGO_EMAIL_DEFAULT_FROM_EMAIL=email_default_from
 
 SPIRIT_PERMISSION_GROUP_NAME=spirit_custom_group_name
 ```
+
+## Comandos
+
+### Crear archivos de traducción
+
+1. Crear la carpeta `locale` dentro de la app
+2. `django-admin makemessages -l es`
+3. `django-admin compilemessages`

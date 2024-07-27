@@ -7,40 +7,27 @@
         CheckList
     </div>
     <div class="card-body">
-        <form method="post">
+        <form method="post" id="activity-form">
             {% csrf_token %}
-
             <ul class="list-group">
                 {% for activity in activities %}
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        {{ activity.name }}
-                        <input type="checkbox" class="form-check-input" name="activity_id" value="{{ activity.id }}">
+                        <label class="form-check-label" for="activity-{{ activity.id }}">
+                            {{ activity.name }}
+                        </label>
+                        <input
+                            type="checkbox"
+                            class="form-check-input"
+                            name="activity_id"
+                            value="{{ activity.id }}"
+                            id="activity-{{ activity.id }}"
+                            data-activity-id="{{ activity.id }}"
+                            {% if activity.id in entries_dict %} checked {% endif %}
+                            >
                     </li>
                 {% endfor %}
             </ul>
         </form>
-    </div>
-</div>
-
-<div class="card m-3" id="rampone-activities">
-    <div class="card-header">
-        <i data-feather="activity" class="mx-1 my-1"></i>
-        {% trans 'Activities' %}
-    </div>
-    <div class="card-body">
-        <h4>Step 1: Start the process</h4>
-        <p class="lead mb-4">Here is some example text of a longer version of a first step. This format is great when you need to explain things more, not just using a ordered list.</p>
-        <h4>Step 2: Continue doing something</h4>
-        <p class="lead mb-4">We're using built-in elements and text utilities to make this list more legible and understandable. This is a great starting point for a step by step guide within your knowledge base article.</p>
-        <h4>Step 3: Finish the process</h4>
-        <p class="lead mb-5">We've used spacing utilities, text utilities, and other components within this article example. This is just an example layout of a few things you can do within an article page. Thanks for reading!</p>
-        <div class="alert alert-primary alert-icon mb-0" role="alert">
-            <div class="alert-icon-aside"><i data-feather="alert-triangle"></i></div>
-            <div class="alert-icon-content">
-                <h5 class="alert-heading">Reminder</h5>
-                If there is something that you really want to emphasize, use the alert component, or our custom icon alert component like this one here!
-            </div>
-        </div>
     </div>
 </div>
 
@@ -55,11 +42,88 @@
             </div>
             <div class="col-auto mb-3">
                 <button class="btn btn-outline-success lift lift-sm" type="button">Print<i data-feather="printer" class="mx-1 my-1"></i></button>
-                
             </div>
         </div>
     </div>
     <div class="card-body">
-
+        <form method="post" id="data-form">
+            {% csrf_token %}
+            <div class="d-grid gap-2">
+                {{ ramp_data_form.as_p }}
+                <button class="btn btn-outline-success lift lift-sm" type="submit">{% trans 'Save' %}</button>
+              </div>
+        </form>
     </div>
 </div>
+
+<div class="card m-3" id="rampone-activities">
+    <div class="card-header">
+        <i data-feather="activity" class="mx-1 my-1"></i>
+        {% trans 'Activities' %}
+    </div>
+    <div class="card-body">
+        <h4>Revisión y Manejo de Equipaje</h4>
+        <p class="lead mb-4">
+            <strong>Revisión de Maletas:</strong> Inspeccionar y verificar las maletas para asegurarse de que estén correctamente etiquetadas y que cumplan con los requisitos de la aerolínea. Esto incluye la revisión de etiquetas y la verificación de que el equipaje se ajuste a las normas de tamaño y peso.
+        </p>
+        <p class="lead mb-4">
+            <strong>Apoyo en el Manejo de Equipajes:</strong> Supervisar el proceso de carga y descarga de equipajes en los aviones, asegurando que se realice de manera segura y eficiente.
+        </p>
+        
+        <h4>Inspección del Área de Rampa</h4>
+        <p class="lead mb-4">
+            <strong>Inspección de Seguridad:</strong> Realizar inspecciones regulares del área de rampa para garantizar que se mantenga limpia y libre de obstáculos. Verificar que el equipo de rampa esté en buenas condiciones y que se sigan los procedimientos de seguridad.
+        </p>
+        <p class="lead mb-4">
+            <strong>Control de Accesos:</strong> Monitorear y controlar el acceso al área de rampa, asegurando que solo el personal autorizado pueda ingresar. Esto incluye verificar credenciales y permisos de acceso.
+        </p>
+        
+        <h4>Apoyo y Coordinación</h4>
+        <p class="lead mb-4">
+            <strong>Observador de Equipajes:</strong> Actuar como observador para garantizar que el equipaje se maneje de manera adecuada, evitando daños y pérdidas.
+        </p>
+        <p class="lead mb-4">
+            <strong>Apoyo a Personal de Rampa:</strong> Brindar apoyo al personal de rampa y otros agentes en la coordinación de las operaciones, asegurando que se cumplan los tiempos de carga y descarga.
+        </p>
+        
+        <h4>Procedimientos Operativos</h4>
+        <p class="lead mb-4">
+            <strong>Cumplimiento de Normativas:</strong> Asegurarse de que todas las actividades realizadas en el área de rampa cumplan con las normativas de la aerolínea y las regulaciones del aeropuerto.
+        </p>
+        <p class="lead mb-4">
+            <strong>Registro de Incidencias:</strong> Documentar cualquier incidente o irregularidad que ocurra en el área de rampa, informando a los supervisores y tomando las medidas necesarias para resolver los problemas.
+        </p>
+        
+        <h4>Interacción con Otros Departamentos</h4>
+        <p class="lead mb-4">
+            <strong>Comunicación:</strong> Coordinar con otros departamentos del aeropuerto, como el personal de seguridad y el personal de tierra, para asegurar una operación fluida y eficiente.
+        </p>
+        <p class="lead mb-4">
+            <strong>Informes:</strong> Proporcionar informes y actualizaciones a los supervisores sobre el estado de las operaciones en el área de rampa.
+        </p>
+        
+        <h4>Habilidades y Competencias</h4>
+        <p class="lead mb-4">
+            <strong>Conocimiento de Seguridad:</strong> Comprensión de las normas y procedimientos de seguridad en el área de rampa.
+        </p>
+        <p class="lead mb-4">
+            <strong>Habilidades de Observación:</strong> Capacidad para observar y detectar posibles problemas o irregularidades en el manejo del equipaje.
+        </p>
+        <p class="lead mb-4">
+            <strong>Comunicación Efectiva:</strong> Habilidad para comunicarse claramente con el personal y coordinar actividades.
+        </p>
+        <p class="lead mb-5">
+            <strong>Atención al Detalle:</strong> Capacidad para realizar inspecciones detalladas y asegurar el cumplimiento de las normas.
+        </p>
+        
+        <div class="alert alert-primary alert-icon mb-0" role="alert">
+            <div class="alert-icon-aside"><i data-feather="alert-triangle"></i></div>
+            <div class="alert-icon-content">
+                <h5 class="alert-heading">Reminder</h5>
+                Este rol es fundamental para asegurar que las operaciones en la rampa se lleven a cabo de manera segura y eficiente, minimizando el riesgo de problemas y garantizando la satisfacción del cliente.
+            </div>
+        </div>
+    </div>
+</div>
+
+

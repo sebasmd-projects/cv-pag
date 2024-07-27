@@ -56,7 +56,7 @@ class Command(BaseCommand):
         if skip_current and skip_current not in skip_apps:
             skip_apps.append(skip_current)
 
-        for app_path in settings.CUSTOM_APPS:
+        for app_path in settings.ALL_CUSTOM_APPS:
             app_name: str = app_path.split('.')[-1]
 
             if app_name in skip_apps:

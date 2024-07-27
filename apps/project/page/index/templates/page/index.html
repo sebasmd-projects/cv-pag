@@ -6,13 +6,8 @@
 {% block title %}Sebastián Morales{% endblock title %}
 
 {% block aditional_meta %}
-    {% if LANGUAGE_CODE == 'es' %}
-        <meta name="description" content="Sebastián Morales - Desarrollador y QA Automatizador con experiencia en pruebas automatizadas, Python, Java, C#, Selenium, Appium, y más. Experto en la creación de frameworks de automatización y realización de pruebas API, manuales y funcionales. Disponible para oportunidades de empleo para aprovechar habilidades en desarrollo de software y aseguramiento de la calidad.">
-        <meta name="keywords" content="Sebastián Morales, Desarrollador, QA Automatizador, pruebas automatizadas, Python, Java, C#, Selenium, Appium, Desarrollador Backend, aseguramiento de calidad, desarrollo de software, frameworks de automatización, pruebas API, pruebas manuales, pruebas funcionales, oportunidad de empleo, Colombia, Antioquia, Ingeniería de Sistemas">
-    {% else %}
-        <meta name="description" content="Sebastián Morales - Developer and Automation QA with expertise in automated testing, Python, Java, C#, Selenium, Appium, and more. Experienced in creating automation frameworks and conducting API, manual, and functional testing. Available for employment opportunities to leverage skills in software development and quality assurance.">
-        <meta name="keywords" content="Sebastián Morales, Developer, Automation QA, automated testing, Python, Java, C#, Selenium, Appium, Backend Developer, quality assurance, software development, automation frameworks, API testing, manual testing, functional testing, employment opportunity, Colombia, Antioquia, Systems Engineering">
-    {% endif %}
+    <meta name="description" content="{% trans 'Sebastián Morales - Developer and Automation QA with expertise in automated testing, Python, Java, C#, Selenium, Appium, and more. Experienced in creating automation frameworks and conducting API, manual, and functional testing. Available for employment opportunities to leverage skills in software development and quality assurance.' %}">
+    <meta name="keywords" content="Sebastián Morales, Developer, Automation QA, automated testing, Python, Java, C#, Selenium, Appium, Backend Developer, quality assurance, software development, automation frameworks, API testing, manual testing, functional testing, employment opportunity, Colombia, Antioquia, Systems Engineering">
 {% endblock aditional_meta %}
 
 {% block main %}

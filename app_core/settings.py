@@ -30,6 +30,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'auditlog',
+    'adminsortable2',
     'import_export',
     'whitenoise.runserver_nostatic',
     'django_ckeditor_5',
@@ -270,3 +271,4 @@ CKEDITOR_5_CONFIGS = {
 CKEDITOR_5_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
 SPIRIT_PERMISSION_GROUP_NAME = os.getenv('SPIRIT_PERMISSION_GROUP_NAME')
+SPIRIT_SUPERVISOR_PERMISSION_GROUP_NAME = os.getenv('SPIRIT_SUPERVISOR_PERMISSION_GROUP_NAME')

@@ -1,0 +1,272 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-27 00:00-0500\n"
+"PO-Revision-Date: 2024-07-27 00:17-0500\n"
+"Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\apps\project\spirit\rampone\models.py:18
+#: .\apps\project\spirit\rampone\models.py:32
+msgid "activity"
+msgstr "actividad"
+
+#: .\apps\project\spirit\rampone\models.py:19
+msgid "description"
+msgstr "descripción"
+
+#: .\apps\project\spirit\rampone\models.py:26
+msgid "1.1 Activity"
+msgstr "1.1 Actividad"
+
+#: .\apps\project\spirit\rampone\models.py:27
+msgid "1.1 Activities"
+msgstr "1.1 Actividades"
+
+#: .\apps\project\spirit\rampone\models.py:31
+#: .\apps\project\spirit\rampone\models.py:56
+msgid "user"
+msgstr "usuario"
+
+#: .\apps\project\spirit\rampone\models.py:33
+msgid "completed date"
+msgstr "fecha completada"
+
+#: .\apps\project\spirit\rampone\models.py:34
+msgid "completed time"
+msgstr "tiempo completado"
+
+#: .\apps\project\spirit\rampone\models.py:35
+msgid "completed"
+msgstr "completado"
+
+#: .\apps\project\spirit\rampone\models.py:48
+msgid "1.2 Activity time entry"
+msgstr "1.2 Entrada de tiempo de actividad"
+
+#: .\apps\project\spirit\rampone\models.py:49
+msgid "1.2 Activity time entries"
+msgstr "1.2 Entradas de tiempo de actividad"
+
+#: .\apps\project\spirit\rampone\models.py:72
+#: .\apps\project\spirit\rampone\models.py:73
+msgid "1.0 CheckList"
+msgstr "1.0 Lista de verificación"
+
+#: .\apps\project\spirit\rampone\models.py:78
+msgid "Flight name"
+msgstr "Nombre del vuelo"
+
+#: .\apps\project\spirit\rampone\models.py:84
+msgid "Flight number"
+msgstr "Número de vuelo"
+
+#: .\apps\project\spirit\rampone\models.py:93
+msgid "2.1 Flight"
+msgstr "2.1 Vuelo"
+
+#: .\apps\project\spirit\rampone\models.py:94
+msgid "2.1 Flights"
+msgstr "2.1 Vuelos"
+
+#: .\apps\project\spirit\rampone\models.py:101
+msgid "Agent"
+msgstr "Agente"
+
+#: .\apps\project\spirit\rampone\models.py:107
+msgid "Date"
+msgstr "Fecha"
+
+#: .\apps\project\spirit\rampone\models.py:113
+msgid "Flight arrival"
+msgstr "Vuelo llegando"
+
+#: .\apps\project\spirit\rampone\models.py:122
+msgid "Flight departure"
+msgstr "Vuelo saliendo"
+
+#: .\apps\project\spirit\rampone\models.py:129
+msgid "license plate"
+msgstr "Matrícula"
+
+#: .\apps\project\spirit\rampone\models.py:134
+msgid "winery 1 open"
+msgstr "Apertura Bodega 1"
+
+#: .\apps\project\spirit\rampone\models.py:138
+msgid "winery 1 clousure"
+msgstr "Cierre Bodega 1"
+
+#: .\apps\project\spirit\rampone\models.py:142
+msgid "first unloading of luggage"
+msgstr "Primer desabordo"
+
+#: .\apps\project\spirit\rampone\models.py:146
+msgid "last unloading of luggage"
+msgstr "Último desabordo"
+
+#: .\apps\project\spirit\rampone\models.py:150
+msgid "arrival of the first baggage shipping"
+msgstr "Llegada primer envío (Diligencias)"
+
+#: .\apps\project\spirit\rampone\models.py:154
+msgid "arrival of the last baggage shipping"
+msgstr "Llegada último envío (Diligencias)"
+
+#: .\apps\project\spirit\rampone\models.py:158
+#: .\apps\project\spirit\rampone\models.py:163
+msgid "rear ladder coupling begins"
+msgstr "Acople escalera"
+
+#: .\apps\project\spirit\rampone\models.py:168
+msgid "maintenance arrival"
+msgstr "Llegada mantenimiento"
+
+#: .\apps\project\spirit\rampone\models.py:173
+msgid "maintenance output"
+msgstr "Salida mantenimiento"
+
+#: .\apps\project\spirit\rampone\models.py:178
+msgid "terpel arrival"
+msgstr "Llegada Terpel"
+
+#: .\apps\project\spirit\rampone\models.py:183
+msgid "terpel output"
+msgstr "Salida de Terpel"
+
+#: .\apps\project\spirit\rampone\models.py:188
+msgid "firefighters in"
+msgstr "Llegada Bomberos"
+
+#: .\apps\project\spirit\rampone\models.py:192
+msgid "firefighters out"
+msgstr "Salida Bomberos"
+
+#: .\apps\project\spirit\rampone\models.py:196
+msgid "plant coupling"
+msgstr "Inicio de Planta"
+
+#: .\apps\project\spirit\rampone\models.py:200
+msgid "plant decoupling"
+msgstr "Fin de Planta"
+
+#: .\apps\project\spirit\rampone\models.py:204
+msgid "baggage load cp1"
+msgstr "Carga de equipaje CP1"
+
+#: .\apps\project\spirit\rampone\models.py:208
+msgid "airplane tire lock"
+msgstr "Bloqueo"
+
+#: .\apps\project\spirit\rampone\models.py:212
+msgid "airplane push back"
+msgstr "Push back"
+
+#: .\apps\project\spirit\rampone\models.py:217
+msgid "baggage shipping 1 code and number"
+msgstr "Diligencia 1 (Código Número)"
+
+#: .\apps\project\spirit\rampone\models.py:222
+msgid "baggage shipping 1 total"
+msgstr "Diligencia 1 (Total Maletas)"
+
+#: .\apps\project\spirit\rampone\models.py:226
+msgid "seals shipping 1"
+msgstr "Diligencia 1 (Precintos)"
+
+#: .\apps\project\spirit\rampone\models.py:232
+msgid "baggage shipping 2 code and number"
+msgstr "Diligencia 2 (Código Número)"
+
+#: .\apps\project\spirit\rampone\models.py:238
+msgid "baggage shipping 2 total"
+msgstr "Diligencia 2 (Total Maletas)"
+
+#: .\apps\project\spirit\rampone\models.py:243
+msgid "seals shipping 2"
+msgstr "Diligencia 2 (Precintos)"
+
+#: .\apps\project\spirit\rampone\models.py:250
+msgid "baggage shipping 3 code and number"
+msgstr "Diligencia 3 (Código Número)"
+
+#: .\apps\project\spirit\rampone\models.py:256
+msgid "baggage shipping 3 total"
+msgstr "Diligencia 3 (Total Maletas)"
+
+#: .\apps\project\spirit\rampone\models.py:261
+msgid "seals shipping 3"
+msgstr "Diligencia 3 (Precintos)"
+
+#: .\apps\project\spirit\rampone\models.py:268
+msgid "baggage shipping 4 code and number"
+msgstr "Diligencia 4 (Código Número)"
+
+#: .\apps\project\spirit\rampone\models.py:274
+msgid "baggage shipping 4 total"
+msgstr "Diligencia 4 (Total Maletas)"
+
+#: .\apps\project\spirit\rampone\models.py:279
+msgid "seals shipping 4"
+msgstr "Diligencia 4 (Precintos)"
+
+#: .\apps\project\spirit\rampone\models.py:285
+msgid "taxiing"
+msgstr "Rodamiento/Taxiing"
+
+#: .\apps\project\spirit\rampone\models.py:320
+#: .\apps\project\spirit\rampone\models.py:321
+msgid "2.0 Ramp One Data"
+msgstr "2.0 Datos Rampa Uno"
+
+#: .\apps\project\spirit\rampone\templates\rampone\includes\header.html:13
+msgid "Ramp One"
+msgstr "Rampa Uno"
+
+#: .\apps\project\spirit\rampone\templates\rampone\includes\header.html:16
+msgid "content"
+msgstr "contenido"
+
+#: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:40
+msgid "Data Sheet"
+msgstr "Hoja de Datos"
+
+#: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:53
+msgid "Save"
+msgstr "Guardar"
+
+#: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:62
+msgid "Activities"
+msgstr "Actividades"
+
+#: .\apps\project\spirit\rampone\templates\rampone_base.html:6
+msgid ""
+"Sebastián Morales - Guides, Checklist and others for Qualified Agent SPIRIT "
+"on the position of ramp one"
+msgstr ""
+
+#: .\apps\project\spirit\rampone\templates\rampone_base.html:7
+msgid "Sebastian Morales, Spirit, Airline, MDE, Longport"
+msgstr ""
+
+#: .\apps\project\spirit\rampone\templates\rampone_base.html:11
+msgid "Sebastian Morales | Spirit | Ramp One"
+msgstr ""
+
+#: .\apps\project\spirit\rampone\views.py:53
+#: .\apps\project\spirit\rampone\views.py:76
+msgid "Activity already completed today."
+msgstr "La actividad ya se ha completado hoy."

@@ -36,7 +36,7 @@ class UserModel(TimeStampedModel, AbstractUser):
     )
 
     profile_photo = models.ImageField(
-        _("foto de perfil"),
+        _("profile picture"),
         upload_to=avatar_directory_path,
         blank=True,
         null=True

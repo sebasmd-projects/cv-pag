@@ -4,7 +4,7 @@
 
 {% block aditional_meta %}
     <meta name="description" content="{% trans 'Sebastián Morales - Guides, Checklist and others for Qualified Agent SPIRIT on the position of ramp one' %}">
-    <meta name="keywords" content="Sebastian Morales, Spirit, Airline, MDE, Longport">
+    <meta name="keywords" content="{% trans 'Sebastian Morales, Spirit, Airline, MDE, Longport' %}">
 {% endblock aditional_meta %}
 
 {% block title %}
@@ -27,21 +27,29 @@
 
 {% block aditional_js %}
     <script>
-        $(document).ready(function(){
-            $('input[type="checkbox"]').change(function(){
-                if(this.checked) {
-                    var activity_id = $(this).val();
-                    $.ajax({
-                        type: "POST",
-                        url: "{% url 'rampone:rampone' %}",
-                        data: {
-                            'csrfmiddlewaretoken': '{{ csrf_token }}',
-                            'activity_id': activity_id
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('activity-form');
+
+            form.addEventListener('change', function (event) {
+                if (event.target.type === 'checkbox') {
+                    const activityId = event.target.dataset.activityId;
+                    const checked = event.target.checked;
+                    fetch(window.location.href, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'X-CSRFToken': '{{ csrf_token }}'
                         },
-                        success: function(){
-                            location.reload();
+                        body: new URLSearchParams({
+                            'activity_id': activityId
+                        })
+                    }).then(response => response.json())
+                    .then(data => {
+                        if (data.error) {
+                            alert(data.error);
+                            event.target.checked = !checked;
                         }
-                    });
+                    }).catch(error => console.error('Error:', error));
                 }
             });
         });

@@ -15,48 +15,48 @@ UserModel = get_user_model()
 
 
 class ActivityNamesCheckListModel(TimeStampedModel):
-    name = models.CharField(
-        _("activity"),
-        max_length=50
-    )
+    name = models.CharField(_("activity"), max_length=50)
+    description = models.TextField(_("description"), blank=True, null=True)
 
     def __str__(self):
         return self.name
 
     class Meta:
         db_table = 'apps_project_spirit_activities'
-        verbose_name = _('Activity')
-        verbose_name_plural = _('Activities')
+        verbose_name = _('1.1 Activity')
+        verbose_name_plural = _('1.1 Activities')
 
 
 class ActivityTimeEntryModel(TimeStampedModel):
-    activity = models.ForeignKey(
-        ActivityNamesCheckListModel,
-        verbose_name=_("activity"),
-        on_delete=models.CASCADE,
-        related_name='time_entries'
-    )
-
-    completed_at = models.DateTimeField(
-        _("completed at"),
-        auto_now=False,
-        auto_now_add=False
-    )
-
+    user = models.ForeignKey(UserModel, verbose_name=_("user"), on_delete=models.CASCADE, related_name='activitytimeentry_user')
+    activity = models.ForeignKey(ActivityNamesCheckListModel, verbose_name=_("activity"), on_delete=models.CASCADE, related_name='activitytimeentry_activity')
+    completed_at_date = models.DateField(_("completed date"))
+    completed_at_time = models.TimeField(_("completed time"))
+    completed = models.BooleanField(_("completed"), default=False)
+    
     def __str__(self):
-        return f"{self.activity.name} at {self.completed_at}"
+        completed_at_date_formatted = self.completed_at_date.strftime(
+            "%B/%d/%Y"
+        )
+        completed_at_time_formatted = self.completed_at_time.strftime(
+            "%H:%M"
+        )
+        return f"{self.user.get_full_name()} | {self.activity.name} | {completed_at_date_formatted} {completed_at_time_formatted}"
 
     class Meta:
         db_table = 'apps_project_spirit_activity_time_entry'
-        verbose_name = _('Activity time entry')
-        verbose_name_plural = _('Activity time entries')
+        verbose_name = _('1.2 Activity time entry')
+        verbose_name_plural = _('1.2 Activity time entries')
+        unique_together = ['user', 'activity', 'completed_at_date']
 
 
 class UserActivityCheckListModel(TimeStampedModel):
     user = models.ForeignKey(
         UserModel,
+        verbose_name=_("user"),
         on_delete=models.SET_NULL,
-        null=True
+        null=True,
+        related_name='useractivitychecklist_user'
     )
 
     time_entries = models.ManyToManyField(
@@ -69,8 +69,8 @@ class UserActivityCheckListModel(TimeStampedModel):
 
     class Meta:
         db_table = 'apps_project_spirit_user_activity_check_list'
-        verbose_name = _('1. CheckList')
-        verbose_name_plural = _('1. CheckList')
+        verbose_name = _('1.0 CheckList')
+        verbose_name_plural = _('1.0 CheckList')
 
 
 class FlightModel(TimeStampedModel):
@@ -90,8 +90,8 @@ class FlightModel(TimeStampedModel):
 
     class Meta:
         db_table = 'apps_project_spirit_flight'
-        verbose_name = _('Flight')
-        verbose_name_plural = _('Flights')
+        verbose_name = _('2.1 Flight')
+        verbose_name_plural = _('2.1 Flights')
 
 
 class RampDataModel(TimeStampedModel):
@@ -99,7 +99,8 @@ class RampDataModel(TimeStampedModel):
     agent = models.ForeignKey(
         UserModel,
         verbose_name=_("Agent"),
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name='rampdata_user'
     )
 
     date = models.DateField(
@@ -316,8 +317,8 @@ class RampDataModel(TimeStampedModel):
 
     class Meta:
         db_table = 'apps_project_spirit_ramp_one_data'
-        verbose_name = _('2. Ramp One Data')
-        verbose_name_plural = _('2. Ramp One Data')
+        verbose_name = _('2.0 Ramp One Data')
+        verbose_name_plural = _('2.0 Ramp One Data')
 
 
 auditlog.register(

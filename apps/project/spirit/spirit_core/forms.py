@@ -65,7 +65,7 @@ class UserLoginForm(forms.Form):
             if not authenticate(username=username, password=password):
                 self.add_error(
                     'password',
-                    _('Las credenciales son inválidas')
+                    _('Invalid credentials')
                 )
 
         return cleaned_data

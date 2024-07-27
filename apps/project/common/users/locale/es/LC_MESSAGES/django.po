@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-27 20:09-0500\n"
+"POT-Creation-Date: 2024-07-26 20:08-0500\n"
 "PO-Revision-Date: 2024-06-27 20:06-0500\n"
 "Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,50 +32,75 @@ msgstr ""
 "la contraseña de este usuario, pero puede cambiarla usando <a href="
 "\"{}\">este formulario</a>."
 
-#: .\apps\project\common\users\admin.py:98
+#: .\apps\project\common\users\admin.py:101
 msgid "User Information"
 msgstr "Información de Usuario"
 
-#: .\apps\project\common\users\admin.py:106
+#: .\apps\project\common\users\admin.py:110
 msgid "Personal Information"
 msgstr "Información de Usuario"
 
-#: .\apps\project\common\users\admin.py:119
+#: .\apps\project\common\users\admin.py:123
 msgid "Permissions"
 msgstr "Permisos"
 
-#: .\apps\project\common\users\admin.py:130
+#: .\apps\project\common\users\admin.py:134
 msgid "Dates"
 msgstr "Fechas"
 
-#: .\apps\project\common\users\admin.py:139
+#: .\apps\project\common\users\admin.py:143
 msgid "Priority"
 msgstr "Prioridad"
 
-#: .\apps\project\common\users\admin.py:155
+#: .\apps\project\common\users\admin.py:159
 msgid "Names"
 msgstr "Nombres"
 
-#: .\apps\project\common\users\admin.py:156
+#: .\apps\project\common\users\admin.py:160
 msgid "Age"
 msgstr "Edad"
 
-#: .\apps\project\common\users\models.py:27
+#: .\apps\project\common\users\models.py:39
+msgid "profile picture"
+msgstr ""
+
+#: .\apps\project\common\users\models.py:46
 msgid "cell_phone"
 msgstr "celular"
 
-#: .\apps\project\common\users\models.py:34
+#: .\apps\project\common\users\models.py:53
 msgid "birthday"
 msgstr "cumpleaños"
 
-#: .\apps\project\common\users\models.py:47
+#: .\apps\project\common\users\models.py:66
 msgid "country code"
 msgstr "código de país"
 
-#: .\apps\project\common\users\models.py:72
+#: .\apps\project\common\users\models.py:74
+msgid "terms and conditions"
+msgstr ""
+
+#: .\apps\project\common\users\models.py:96
 msgid "User"
 msgstr "Usuario"
 
-#: .\apps\project\common\users\models.py:73
+#: .\apps\project\common\users\models.py:97
 msgid "Users"
 msgstr "Usuarios"
+
+#: .\apps\project\common\users\validators.py:10
+msgid ""
+"Please enter a valid name. This value can contain only letters, min lenght: 3"
+msgstr ""
+
+#: .\apps\project\common\users\validators.py:19
+msgid ""
+"Please enter a valid last name. This value can contain only letters, min "
+"lenght: 3"
+msgstr ""
+
+#: .\apps\project\common\users\validators.py:28
+msgid ""
+"Please enter a valid username. This value can contain only letters, numbers "
+"and this characters /./+/-/_min lenght: 4"
+msgstr ""
