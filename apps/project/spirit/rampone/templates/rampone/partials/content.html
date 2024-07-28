@@ -41,17 +41,194 @@
                 </div>
             </div>
             <div class="col-auto mb-3">
-                <button class="btn btn-outline-success lift lift-sm" type="button">Print<i data-feather="printer" class="mx-1 my-1"></i></button>
+                <button class="btn btn-outline-success lift lift-sm" type="button">{% trans 'Print' %}<i data-feather="printer" class="mx-1 my-1"></i></button>
             </div>
         </div>
     </div>
     <div class="card-body">
         <form method="post" id="data-form">
             {% csrf_token %}
-            <div class="d-grid gap-2">
-                {{ ramp_data_form.as_p }}
+            <!-- General Info -->
+            <div class="row">
+                <!-- Agent -->
+                <div class="col-lg-4 col-md-4 col-6 my-1 order-0 ">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-person-badge"></i>
+                        </span>
+                        <input type="text" class="form-control" disabled required name="agent" id="id_agent" value={{request.user}}>
+                    </div>
+                </div>
+                
+                <!-- Date -->
+                <div class="col-lg-4 col-md-4 col-6 my-1 order-1">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-calendar-range"></i>
+                        </span>
+                        <input type="date" class="form-control" disabled required name="date" id="id_date" value={{today_date}}>
+                    </div>
+                </div>
+                
+                <!-- License Plate -->
+                <div class="col-lg-4 col-md-4 col-6 my-1 order-lg-2 order-md-2 order-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" required name="license_plate" maxlength="10" id="id_license_plate" placeholder="{% trans 'License Plate' %}">
+                        <label for="id_license_plate"><i class="bi bi-airplane-fill"></i> {% trans 'License Plate' %}</label>
+                    </div>
+                </div>
+                
+                <!-- Flight Arrival -->
+                <div class="col-lg-4 col-md-4 col-6 my-1 order-lg-3 order-md-3 order-2">
+                    <div class="form-floating">
+                        {{ramp_data_form.flight_arrival}}
+                        <label for="id_flight_arrival">{% trans 'Flight Arrival' %}</label>
+                    </div>
+                </div>
+                
+                <!-- Flight Departure -->
+                <div class="col-lg-4 col-md-4 col-6 my-1 order-lg-4 order-md-4 order-3">
+                    <div class="form-floating">
+                        {{ramp_data_form.flight_departure}}
+                        <label for="id_flight_departure">{% trans 'Flight Departure' %}</label>
+                    </div>
+                </div>
+
+                <!-- Airplane Tire Lock -->
+                <div class="col-lg-4 col-md-4 col-6 my-1 order-lg-5 order-md-5 order-5">
+                    <div class="input-group form-floating">
+                        <input type="text" class="form-control" required name="airplane_tire_lock" id="id_airplane_tire_lock" placeholder="{% trans 'Lock Airplane Tire' %}">
+                        <label for="id_airplane_tire_lock"><i data-feather="anchor"></i> {% trans 'Airplane Tire Lock' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_airplane_tire_lock')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Winery -->
+            <div class="row">
+                <!-- Winery 1 Open -->
+                <div class="col-6 my-1">
+                    <div class="input-group form-floating">
+                        <input type="text" class="form-control" required name="winery_1_open" id="id_winery_1_open" placeholder="Open Winery 1">
+                        <label for="id_winery_1_open"><i class="bi bi-box-seam"></i> {% trans 'Open Winery 1' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_winery_1_open')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Winery 1 Closure -->
+                <div class="col-6 my-1">
+                    <div class="input-group form-floating">
+                        <input type="text" class="form-control" required name="winery_1_closure" id="id_winery_1_closure" placeholder="Closure Winery 1">
+                        <label for="id_winery_1_closure"><i class="bi bi-box-seam-fill"></i> {% trans 'Closure Winery 1' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_winery_1_closure')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Unloading of Luggage -->
+            <div class="row">
+                <!-- First Unloading of Luggage -->
+                <div class="col-6 my-1">
+                    <div class="input-group form-floating">
+                        <input type="text" class="form-control" required name="first_unloading_of_luggage" id="id_first_unloading_of_luggage" placeholder="First Unloading of Luggage">
+                        <label for="id_first_unloading_of_luggage"><i class="bi bi-suitcase"></i> {% trans 'First Unloading of Luggage' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_first_unloading_of_luggage')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Last Unloading of Luggage -->
+                <div class="col-6 my-1">
+                    <div class="input-group form-floating">
+                        <input type="text" class="form-control" required name="last_unloading_of_luggage" id="id_last_unloading_of_luggage" placeholder="Last Unloading of Luggage">
+                        <label for="id_last_unloading_of_luggage"><i class="bi bi-suitcase-fill"></i> {% trans 'Last Unloading of Luggage' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_last_unloading_of_luggage')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rear Ladder Coupling -->
+            <div class="row">
+                <!-- Rear Ladder Coupling Begins -->
+                <div class="col-6 my-1">
+                    <div class="input-group form-floating">
+                        <input type="text" class="form-control" required name="rear_ladder_coupling_begins" id="id_rear_ladder_coupling_begins" placeholder="Begins of Rear Ladder Coupling">
+                        <label for="id_rear_ladder_coupling_begins"><i class="bi bi-ladder"></i> {% trans 'Begins Rear Ladder Coupling' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_rear_ladder_coupling_begins')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Rear Ladder Coupling End -->
+                <div class="col-6 my-1">
+                    <div class="input-group form-floating">
+                        <input type="text" class="form-control" required name="rear_ladder_coupling_end" id="id_rear_ladder_coupling_end" placeholder="End of Rear Ladder Coupling">
+                        <label for="id_rear_ladder_coupling_end"><i class="bi bi-ladder"></i> {% trans 'End Rear Ladder Coupling' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_rear_ladder_coupling_end')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arrival of the Baggage Shipping -->
+            <div class="row">
+                <!-- Arrival of the First Baggage Shipping -->
+                <div class="col-6 my-1">
+                    <div class="input-group form-floating">
+                        <input type="text" class="form-control" required name="arrival_of_the_first_baggage_shipping" id="id_arrival_of_the_first_baggage_shipping" placeholder="First Arrival of the Baggage Shipping">
+                        <label for="id_arrival_of_the_first_baggage_shipping"><i class="bi bi-truck"></i> {% trans 'First Arrival of the Baggage Shipping' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_arrival_of_the_first_baggage_shipping')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Arrival of the Last Baggage Shipping -->
+                <div class="col-6 my-1">
+                    <div class="input-group form-floating">
+                        <input type="text" class="form-control" required name="arrival_of_the_last_baggage_shipping" id="id_arrival_of_the_last_baggage_shipping" placeholder="Last Arrival of the Baggage Shipping">
+                        <label for="id_arrival_of_the_last_baggage_shipping"><i class="bi bi-truck-flatbed"></i> {% trans 'Last Arrival of the Baggage Shipping' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_arrival_of_the_last_baggage_shipping')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maintenance -->
+            <div class="row">
+                <!-- Maintenance arrival -->
+                <div class="col-6 my-1">
+                    <div class="input-group form-floating">
+                        <input type="text" class="form-control" required name="maintenance_arrival" id="id_maintenance_arrival" placeholder="Arrival Maintenace">
+                        <label for="id_maintenance_arrival"><i class="bi bi-tools"></i> {% trans 'Arrival Maintenace' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_maintenance_arrival')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Maintenance output -->
+                <div class="col-6 my-1">
+                    <div class="input-group form-floating">
+                        <input type="text" class="form-control" required name="maintenance_output" id="id_maintenance_output" placeholder="Output Maintenace">
+                        <label for="id_maintenance_output"><i class="bi bi-tools"></i> {% trans 'Output Maintenace' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_maintenance_output')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 mt-1">
                 <button class="btn btn-outline-success lift lift-sm" type="submit">{% trans 'Save' %}</button>
-              </div>
+            </div>
         </form>
     </div>
 </div>

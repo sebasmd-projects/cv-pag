@@ -155,6 +155,8 @@ PASSWORD_HASHERS = [
 
 LANGUAGE_CODE = 'en'
 
+USE_TZ = True
+
 TIME_ZONE = 'America/Bogota'
 
 LANGUAGES = [
@@ -176,8 +178,6 @@ PARLER_LANGUAGES = {
 ROSETTA_SHOW_AT_ADMIN_PANEL = True
 
 USE_I18N = True
-
-USE_TZ = True
 
 STATIC_URL = 'static/'
 

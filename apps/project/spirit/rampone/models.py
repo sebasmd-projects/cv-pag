@@ -6,6 +6,8 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
 from app_core import get_app_from_path
+from apps.project.spirit.baggage.models import BaggageShippingModel
+from apps.project.spirit.spirit_core.models import FlightModel
 
 TimeStampedModel = get_app_from_path(
     f'{settings.UTILS_PATH}.models.TimeStampedModel'
@@ -28,12 +30,14 @@ class ActivityNamesCheckListModel(TimeStampedModel):
 
 
 class ActivityTimeEntryModel(TimeStampedModel):
-    user = models.ForeignKey(UserModel, verbose_name=_("user"), on_delete=models.CASCADE, related_name='activitytimeentry_user')
-    activity = models.ForeignKey(ActivityNamesCheckListModel, verbose_name=_("activity"), on_delete=models.CASCADE, related_name='activitytimeentry_activity')
+    user = models.ForeignKey(UserModel, verbose_name=_(
+        "user"), on_delete=models.CASCADE, related_name='activitytimeentry_user')
+    activity = models.ForeignKey(ActivityNamesCheckListModel, verbose_name=_(
+        "activity"), on_delete=models.CASCADE, related_name='activitytimeentry_activity')
     completed_at_date = models.DateField(_("completed date"))
     completed_at_time = models.TimeField(_("completed time"))
     completed = models.BooleanField(_("completed"), default=False)
-    
+
     def __str__(self):
         completed_at_date_formatted = self.completed_at_date.strftime(
             "%B/%d/%Y"
@@ -73,27 +77,6 @@ class UserActivityCheckListModel(TimeStampedModel):
         verbose_name_plural = _('1.0 CheckList')
 
 
-class FlightModel(TimeStampedModel):
-    flight_name = models.CharField(
-        _("Flight name"),
-        max_length=10,
-        blank=True, null=True
-    )
-
-    flight_number = models.PositiveIntegerField(
-        _("Flight number"),
-        blank=True, null=True
-    )
-
-    def __str__(self):
-        return f"{self.flight_name} {self.flight_number}"
-
-    class Meta:
-        db_table = 'apps_project_spirit_flight'
-        verbose_name = _('2.1 Flight')
-        verbose_name_plural = _('2.1 Flights')
-
-
 class RampDataModel(TimeStampedModel):
 
     agent = models.ForeignKey(
@@ -130,6 +113,7 @@ class RampDataModel(TimeStampedModel):
         max_length=10
     )
 
+
     winery_1_open = models.TimeField(
         _("winery 1 open")
     )
@@ -137,6 +121,7 @@ class RampDataModel(TimeStampedModel):
     winery_1_closure = models.TimeField(
         _("winery 1 clousure")
     )
+
 
     first_unloading_of_luggage = models.TimeField(
         _("first unloading of luggage")
@@ -146,6 +131,7 @@ class RampDataModel(TimeStampedModel):
         _("last unloading of luggage")
     )
 
+
     arrival_of_the_first_baggage_shipping = models.TimeField(
         _("arrival of the first baggage shipping")
     )
@@ -154,34 +140,31 @@ class RampDataModel(TimeStampedModel):
         _("arrival of the last baggage shipping")
     )
 
+
     rear_ladder_coupling_begins = models.TimeField(
         _("rear ladder coupling begins"),
-        auto_now=True
     )
 
     rear_ladder_coupling_end = models.TimeField(
-        _("rear ladder coupling begins"),
-        auto_now=True
+        _("rear ladder coupling end"),
     )
+
 
     maintenance_arrival = models.TimeField(
         _("maintenance arrival"),
-        auto_now=True
     )
 
     maintenance_output = models.TimeField(
         _("maintenance output"),
-        auto_now=True
     )
+
 
     gasoline_arrival = models.TimeField(
         _("terpel arrival"),
-        auto_now=True
     )
 
     gasoline_output = models.TimeField(
         _("terpel output"),
-        auto_now=True
     )
 
     firefighters_in = models.TimeField(
@@ -200,6 +183,12 @@ class RampDataModel(TimeStampedModel):
         _("plant decoupling")
     )
 
+    baggage_shipping = models.ManyToManyField(
+        BaggageShippingModel,
+        related_name='rampdata_baggageshipping',
+        verbose_name=_('baggage shipping')
+    )
+
     baggage_load_cp1 = models.PositiveIntegerField(
         _("baggage load cp1")
     )
@@ -210,75 +199,6 @@ class RampDataModel(TimeStampedModel):
 
     airplane_push_back = models.TimeField(
         _("airplane push back")
-    )
-
-    # Diligencia 1
-    baggage_shipping_1 = models.CharField(
-        _("baggage shipping 1 code and number"),
-        max_length=10
-    )
-
-    baggage_shipping_1_total = models.PositiveIntegerField(
-        _("baggage shipping 1 total")
-    )
-
-    seals_shipping_1 = models.CharField(
-        _("seals shipping 1"),
-        max_length=255
-    )
-
-    # Diligencia 2
-    baggage_shipping_2 = models.CharField(
-        _("baggage shipping 2 code and number"),
-        max_length=10,
-        blank=True, null=True
-    )
-
-    baggage_shipping_2_total = models.PositiveIntegerField(
-        _("baggage shipping 2 total"),
-        blank=True, null=True
-    )
-
-    seals_shipping_2 = models.CharField(
-        _("seals shipping 2"),
-        max_length=255,
-        blank=True, null=True
-    )
-
-    # Diligencia 3
-    baggage_shipping_3 = models.CharField(
-        _("baggage shipping 3 code and number"),
-        max_length=10,
-        blank=True, null=True
-    )
-
-    baggage_shipping_3_total = models.PositiveIntegerField(
-        _("baggage shipping 3 total"),
-        blank=True, null=True
-    )
-
-    seals_shipping_3 = models.CharField(
-        _("seals shipping 3"),
-        max_length=255,
-        blank=True, null=True
-    )
-
-    # Diligencia 4
-    baggage_shipping_4 = models.CharField(
-        _("baggage shipping 4 code and number"),
-        max_length=10,
-        blank=True, null=True
-    )
-
-    baggage_shipping_4_total = models.PositiveIntegerField(
-        _("baggage shipping 4 total"),
-        blank=True, null=True
-    )
-
-    seals_shipping_4 = models.CharField(
-        _("seals shipping 4"),
-        max_length=255,
-        blank=True, null=True
     )
 
     taxiing = models.TimeField(

@@ -34,6 +34,10 @@
                 if (event.target.type === 'checkbox') {
                     const activityId = event.target.dataset.activityId;
                     const checked = event.target.checked;
+                    const localDateTime = new Date();
+                    const localDate = localDateTime.toLocaleDateString('en-US');
+                    const localTime = localDateTime.toLocaleTimeString('en-US', { hour12: false });
+
                     fetch(window.location.href, {
                         method: 'POST',
                         headers: {
@@ -41,7 +45,9 @@
                             'X-CSRFToken': '{{ csrf_token }}'
                         },
                         body: new URLSearchParams({
-                            'activity_id': activityId
+                            'activity_id': activityId,
+                            'local_time': localTime,
+                            'local_date': localDate,
                         })
                     }).then(response => response.json())
                     .then(data => {
@@ -53,6 +59,49 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const form = document.getElementById('data-form');
+
+            form.addEventListener('submit', function(event){
+                event.preventDefault();
+
+                const localDateTime = new Date();
+                const localDate = localDateTime.toLocaleDateString('en-US');
+                const localTime = localDateTime.toLocaleTimeString('en-US', { hour12: false });
+                const formBody = new URLSearchParams({
+                    'form_id': 'data_form',
+                    'local_time': localTime,
+                    'local_date': localDate,
+                });
+
+                fetch(window.location.href,{
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    body: formBody
+                }).then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert(data.error);
+                    }
+                }).catch(error => console.error('Error:', error));
+            });
+        });
+    </script>
+
+    <script>
+        function setCurrentTime(inputId) {
+            const input = document.getElementById(inputId);
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            input.value = `${hours}:${minutes}`;
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 {% endblock aditional_js %}

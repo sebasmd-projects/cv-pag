@@ -12,10 +12,16 @@ class TimeStampedModel(models.Model):
     """A base model class with timestamp fields."""
     history = AuditlogHistoryField()
 
+    language_choices = [
+        ('es', _('Spanish')),
+        ('en', _('English')),
+    ]
+
     language = models.CharField(
         _("language"),
-        max_length=50,
-        default="es",
+        max_length=4,
+        choices=language_choices,
+        default='es',
         blank=True,
         null=True
     )
@@ -40,6 +46,8 @@ class TimeStampedModel(models.Model):
     default_order = models.PositiveIntegerField(
         _('priority'),
         default=1,
+        blank=True,
+        null=True
     )
 
     class Meta:

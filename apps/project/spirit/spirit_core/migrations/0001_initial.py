@@ -2,7 +2,6 @@
 
 from django.db import migrations, models
 import django.utils.timezone
-import uuid
 
 
 class Migration(migrations.Migration):
@@ -14,7 +13,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='ContactModel',
+            name='FlightModel',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('language', models.CharField(blank=True, choices=[('es', 'Spanish'), ('en', 'English')], default='es', max_length=4, null=True, verbose_name='language')),
@@ -22,16 +21,15 @@ class Migration(migrations.Migration):
                 ('updated', models.DateTimeField(auto_now=True, verbose_name='updated')),
                 ('is_active', models.BooleanField(default=True, verbose_name='is active')),
                 ('default_order', models.PositiveIntegerField(blank=True, default=1, null=True, verbose_name='priority')),
-                ('names', models.CharField(max_length=150, verbose_name='names')),
-                ('email', models.EmailField(max_length=254, verbose_name='email')),
-                ('title', models.CharField(max_length=50, verbose_name='subject')),
-                ('message', models.TextField(verbose_name='message')),
-                ('unique_id', models.UUIDField(default=uuid.uuid4, unique=True)),
+                ('flight_category', models.CharField(choices=[('D', 'Departure'), ('A', 'Arrival')], default=('A', 'Arrival'), max_length=50, verbose_name='category')),
+                ('flight_name', models.CharField(blank=True, max_length=10, null=True, verbose_name='Flight name')),
+                ('flight_number', models.PositiveIntegerField(blank=True, null=True, verbose_name='Flight number')),
             ],
             options={
-                'verbose_name': 'Contact Form',
-                'verbose_name_plural': 'Contact Forms',
-                'db_table': 'apps_project_page_index_contact',
+                'verbose_name': '1.0 Flight',
+                'verbose_name_plural': '1.0 Flights',
+                'db_table': 'apps_project_spirit_flight',
+                'unique_together': {('flight_category', 'flight_name', 'flight_number')},
             },
         ),
     ]
