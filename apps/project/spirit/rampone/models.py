@@ -113,7 +113,6 @@ class RampDataModel(TimeStampedModel):
         max_length=10
     )
 
-
     winery_1_open = models.TimeField(
         _("winery 1 open")
     )
@@ -121,7 +120,6 @@ class RampDataModel(TimeStampedModel):
     winery_1_closure = models.TimeField(
         _("winery 1 clousure")
     )
-
 
     first_unloading_of_luggage = models.TimeField(
         _("first unloading of luggage")
@@ -131,6 +129,10 @@ class RampDataModel(TimeStampedModel):
         _("last unloading of luggage")
     )
 
+    airplane_winery_inspection = models.TimeField(
+        _("airplane winery inspection"),
+        auto_now=True
+    )
 
     arrival_of_the_first_baggage_shipping = models.TimeField(
         _("arrival of the first baggage shipping")
@@ -140,7 +142,6 @@ class RampDataModel(TimeStampedModel):
         _("arrival of the last baggage shipping")
     )
 
-
     rear_ladder_coupling_begins = models.TimeField(
         _("rear ladder coupling begins"),
     )
@@ -148,7 +149,6 @@ class RampDataModel(TimeStampedModel):
     rear_ladder_coupling_end = models.TimeField(
         _("rear ladder coupling end"),
     )
-
 
     maintenance_arrival = models.TimeField(
         _("maintenance arrival"),

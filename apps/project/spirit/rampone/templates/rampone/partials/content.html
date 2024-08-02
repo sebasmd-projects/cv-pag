@@ -130,6 +130,30 @@
                 </div>
             </div>
 
+            <!-- Rear Ladder Coupling -->
+            <div class="row">
+                <!-- Rear Ladder Coupling Begins -->
+                <div class="col-lg-6 col-md-6 col-sm-12 my-1">
+                    <div class="input-group form-floating">
+                        <input type="time" class="form-control" required name="rear_ladder_coupling_begins" id="id_rear_ladder_coupling_begins" placeholder="Begins of Rear Ladder Coupling">
+                        <label for="id_rear_ladder_coupling_begins"><i class="bi bi-ladder"></i> {% trans 'Begins Rear Ladder Coupling' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_rear_ladder_coupling_begins')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Rear Ladder Coupling End -->
+                <div class="col-lg-6 col-md-6 col-sm-12 my-1">
+                    <div class="input-group form-floating">
+                        <input type="time" class="form-control" required name="rear_ladder_coupling_end" id="id_rear_ladder_coupling_end" placeholder="End of Rear Ladder Coupling">
+                        <label for="id_rear_ladder_coupling_end"><i class="bi bi-ladder"></i> {% trans 'End Rear Ladder Coupling' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_rear_ladder_coupling_end')">
+                            <i class="bi bi-clock"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             <!-- First Unloading of Luggage -->
             <div class="row">
                 <!-- First Unloading of Luggage -->
@@ -154,24 +178,13 @@
                 </div>
             </div>
 
-            <!-- Rear Ladder Coupling -->
+            <!-- Airplane winery inspection -->
             <div class="row">
-                <!-- Rear Ladder Coupling Begins -->
-                <div class="col-lg-6 col-md-6 col-sm-12 my-1">
+                <div class="col-12 my-1">
                     <div class="input-group form-floating">
-                        <input type="time" class="form-control" required name="rear_ladder_coupling_begins" id="id_rear_ladder_coupling_begins" placeholder="Begins of Rear Ladder Coupling">
-                        <label for="id_rear_ladder_coupling_begins"><i class="bi bi-ladder"></i> {% trans 'Begins Rear Ladder Coupling' %}</label>
-                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_rear_ladder_coupling_begins')">
-                            <i class="bi bi-clock"></i>
-                        </button>
-                    </div>
-                </div>
-                <!-- Rear Ladder Coupling End -->
-                <div class="col-lg-6 col-md-6 col-sm-12 my-1">
-                    <div class="input-group form-floating">
-                        <input type="time" class="form-control" required name="rear_ladder_coupling_end" id="id_rear_ladder_coupling_end" placeholder="End of Rear Ladder Coupling">
-                        <label for="id_rear_ladder_coupling_end"><i class="bi bi-ladder"></i> {% trans 'End Rear Ladder Coupling' %}</label>
-                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_rear_ladder_coupling_end')">
+                        <input type="time" class="form-control" required name="airplane_winery_inspection" id="id_airplane_winery_inspection" placeholder="First Arrival of the Baggage Shipping">
+                        <label for="id_airplane_winery_inspection"><i class="bi bi-truck"></i> {% trans 'Airplane Winery Inspection' %}</label>
+                        <button class="btn btn-dark" type="button" onclick="setCurrentTime('id_airplane_winery_inspection')">
                             <i class="bi bi-clock"></i>
                         </button>
                     </div>
@@ -225,6 +238,12 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Plant -->
+            
+            <!-- Gasoline -->
+
+            <!-- Firefighters -->
 
             <div class="d-grid gap-2 mt-1">
                 <button class="btn btn-outline-success lift lift-sm" type="submit">{% trans 'Save' %}</button>
