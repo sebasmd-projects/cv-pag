@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-
+from datetime import timedelta
 from django.utils.translation import gettext_lazy as _
 from dotenv import load_dotenv
 
@@ -30,6 +30,13 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'auditlog',
+    'corsheaders',
+    'drf_yasg',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_framework_simplejwt',
+    'django_cleanup.apps.CleanupConfig',
+    'django_filters',
     'adminsortable2',
     'import_export',
     'whitenoise.runserver_nostatic',
@@ -77,6 +84,7 @@ else:
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -88,6 +96,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'apps.common.utils.middleware.APILogMiddleware',
 ]
+
+MIDDLEWARE_NOT_INCLUDE = [os.getenv('MIDDLEWARE_NOT_INCLUDE')]
 
 ROOT_URLCONF = 'app_core.urls'
 
@@ -200,6 +210,9 @@ MEDIA_ROOT = str(BASE_DIR / 'public' / 'media')
 MEDIA_URL = "public/media/"
 
 STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
@@ -269,6 +282,31 @@ CKEDITOR_5_CONFIGS = {
 }
 
 CKEDITOR_5_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': True,
+    'SECURITY_DEFINITIONS': {
+        'Basic': {
+            'type': 'basic'
+        },
+    }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend'
+    ],
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+}
 
 SPIRIT_PERMISSION_GROUP_NAME = os.getenv('SPIRIT_PERMISSION_GROUP_NAME')
 SPIRIT_SUPERVISOR_PERMISSION_GROUP_NAME = os.getenv('SPIRIT_SUPERVISOR_PERMISSION_GROUP_NAME')

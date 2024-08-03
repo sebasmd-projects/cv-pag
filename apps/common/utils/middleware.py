@@ -1,5 +1,5 @@
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 
 from django.conf import settings
 from django.db import transaction
@@ -57,7 +57,7 @@ class APILogMiddleware:
         origin = request.META.get('HTTP_ORIGIN', '')
 
         entry = {
-            _('timestamp'): datetime.now(datetime.UTC).strftime('%Y-%m-%d %H:%M:%S'),
+            _('timestamp'): datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S'),
             _('method'): request.method,
             _('url'): request.path,
             _('status'): response.status_code,
