@@ -1,6 +1,7 @@
 import os
-from pathlib import Path
 from datetime import timedelta
+from pathlib import Path
+
 from django.utils.translation import gettext_lazy as _
 from dotenv import load_dotenv
 
@@ -291,6 +292,9 @@ SWAGGER_SETTINGS = {
         },
     }
 }
+
+YASG_DEFAULT_EMAIL = os.getenv('YASG_DEFAULT_EMAIL')
+YASG_TERMS_OF_SERVICE = os.getenv('YASG_TERMS_OF_SERVICE')
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
