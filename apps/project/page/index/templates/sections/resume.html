@@ -1,137 +1,329 @@
 {% load static i18n %}
 
 <section id="resume" class="resume section">
-  <div class="container section-title" data-aos="fade-up">
+  <div class="container" data-aos="fade-up">
     <h2>{% trans 'Resume' %}</h2>
-    <p>
-      {% blocktrans %}
-        I am a web application developer with the Django framework of Python and Next.js of React.
-        I have built content management applications, educational platforms, and implemented payment gateways.
-        Additionally, I have experience in developing customer relationship management (CRM) systems,
-        enterprise resource planning (ERP) systems, and residential management systems (RMS).
-        I have also worked on third-party service integrations, enhancing the functionality and efficiency of the applications I develop.
-      {% endblocktrans %}
-    </p>
-    <p>
-      {% blocktrans %}
-        I am an Automation Engineer and Quality Analyst with experience in the banking sector, using C#, Python, or Java along with Selenium and Appium.
-        I have implemented CI/CD with Jenkins and Azure DevOps. As a Quality Analyst, I have a solid knowledge of ISTQB standards.
-      {% endblocktrans %}
-    </p>
-    <p>
-      {% blocktrans %}
-        I am passionate about programming and enjoy implementing best development practices, working within the framework of agile methodologies.
-        I like to be a leader, work in a team, and apply critical thinking to provide the best solutions for the company.
-      {% endblocktrans %}
-    </p>
+    <ul class="list-unstyled">
+      <li class="my-1 text-justify">
+        {% trans 'I am a web application developer with the Django framework of Python and Next.js of React.' %}
+      </li>
+      <li class="my-1 text-justify">
+        {% trans 'I have built content management applications, educational platforms, and implemented payment gateways.' %}
+      </li>
+      <li class="my-1 text-justify">
+        {% trans 'Additionally, I have experience in developing customer relationship management (CRM) systems, enterprise resource planning (ERP) systems, and residential management systems (RMS).' %}
+      </li>
+      <li class="my-1 text-justify">
+        {% trans 'I have also worked on third-party service integrations, enhancing the functionality and efficiency of the applications I develop.' %}
+      </li>
+      <li class="my-1 text-justify">
+        {% trans 'I am an Automation Engineer and Quality Analyst with experience in the banking sector, using C#, Python, or Java along with Selenium and Appium.' %}
+      </li>
+      <li class="my-1 text-justify">
+        {% trans 'I have implemented CI/CD with Azure DevOps. As a Quality Analyst, I have a solid knowledge of ISTQB standards.' %}
+      </li>
+      <li class="my-1 text-justify">
+        {% trans 'I am passionate about programming and enjoy implementing best development practices, working within the framework of agile methodologies.' %}
+      </li>
+      <li class="my-1 text-justify">
+        {% trans 'I like to be a leader, work in a team, and apply critical thinking to provide the best solutions for the company.' %}
+      </li>
+    </ul>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
         <h3 class="resume-title" id="profesional-experience">{% trans 'Professional Experience' %}</h3>
         <div class="resume-item">
-          <h4>Encora</h4>
-          <p><em>{% trans 'Senior Quality Assurance Engineer' %}</em></p>
-          <h5>{% trans 'Dec 2021 - Aug 2023' %}</h5>
-          <p>
-            {% blocktrans %}
-              Lead the creation of an automation framework on the banking software
-              in C# with Selenium and POM design pattern that contains all the
-              specifications required for the projects to be able to standardize
-              automation testing (mobile, web and API) and automate the happy path
-              tests, regression tests, negative tests, end-to-end testing, and
-              others.
-            {% endblocktrans %}
-          </p>
-          <div class="resume-item">
-            <h5>{% trans 'QA Automation' %}</h5>
-            <ul>
-              <li>
+            <h4>Encora</h4>
+            <p><em>{% trans 'Senior Quality Assurance Engineer' %}</em></p>
+            <h5>{% trans 'Dec 2021 - Aug 2023' %}</h5>
+            <p>
                 {% blocktrans %}
-                  Lead the creation of an automation framework on the banking
-                  software in C# with Selenium and POM design pattern that
-                  contains all the specifications required for the projects to be
-                  able to standardize automation testing (mobile, web and API) and
-                  automate the happy path tests, regression tests, negative tests,
-                  end-to-end testing, and others.
+                  Lead the creation of an automation framework on the banking software
+                  in C# with Selenium and POM design pattern that contains all the
+                  specifications required for the projects to be able to standardize
+                  automation testing (mobile, web and API) and automate the happy path
+                  tests, regression tests, negative tests, end-to-end testing, and
+                  others.
                 {% endblocktrans %}
-              </li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h5>{% trans 'API Testing' %}</h5>
-            <ul>
-              <li>
-                {% blocktrans %}
-                  Conducted API testing on both projects to ensure that the
-                  different components of the system were integrated and worked
-                  together seamlessly.
-                {% endblocktrans %}
-              </li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h5>{% trans 'Manual and Functional Testing' %}</h5>
-            <ul>
-              <li>
-                {% blocktrans %}
-                  Conducted manual testing on both projects to ensure that the
-                  requirements and specifications defined in the user stories (HU)
-                  were met, focusing mainly on the risk matrix following the test
-                  plan.
-                {% endblocktrans %}
-              </li>
-            </ul>
-          </div>
+            </p>
+
+            <div class="accordion">
+              <div class="accordion-item resume-item">
+                <h2 class="accordion-header">
+                  <a class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong>{% trans 'QA Automation' %}</strong>
+                  </a>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul>
+                        <li>
+                          {% trans 'Design, develop, and maintain automated test scripts.' %}
+                        </li>
+                        <li>
+                          {% trans 'Design test cases and scenarios for automated testing.' %}
+                        </li>
+                        <li>
+                          {% trans 'Implement automated testing frameworks and tools.' %}
+                        </li>
+                        <li>
+                          {% trans 'Analyze requirements and specifications to create detailed test plans.' %}
+                        </li>
+                        <li>
+                          {% trans 'Execute automated tests and evaluate results.' %}
+                        </li>
+                        <li>
+                          {% trans 'Identify, record, document, and track defects.' %}
+                        </li>
+                        <li>
+                          {% trans 'Generate test reports and metrics to communicate test results.' %}
+                        </li>
+                        <li>
+                          {% trans 'Integrate automated tests into the CI/CD pipeline.' %}
+                        </li>
+                        <li>
+                          {% trans 'Update and maintain existing automated test scripts as the application evolves.' %}
+                        </li>
+                        <li>
+                          {% trans 'Refactor and optimize code for better performance and reliability.' %}
+                        </li>
+                        <li>
+                          {% trans 'Develop and execute performance and load tests.' %}
+                        </li>
+                        <li>
+                          {% trans 'Participate in sprint planning, daily stand-ups, and retrospective meetings.' %}
+                        </li>
+                        <li>
+                          {% trans 'Train and mentor team members on automation tools and best practices.' %}
+                        </li>
+                        <li>
+                          {% trans 'Work closely with developers and other stakeholders to understand application functionality and improve test processes.' %}
+                        </li>
+                        <li>
+                          {% trans 'Ensure automated tests cover compliance requirements.' %}
+                        </li>
+                        <li>
+                          {% trans 'Implement security testing practices within the automation framework.' %}
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item resume-item">
+                <h2 class="accordion-header">
+                  <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong>{% trans 'API Testing' %}</strong>
+                  </a>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        {% trans 'Conducted API testing on both projects to ensure that the different components of the system were integrated and worked together seamlessly.' %}
+                      </li>
+                      <li>
+                        {% trans 'Create detailed test plans and test cases based on API documentation and requirements.' %}
+                      </li>
+                      <li>
+                        {% trans 'Identify the different types of tests needed, such as functional, performance, security, and usability tests.' %}
+                      </li>
+                      <li>
+                        {% trans 'Monitored API performance and optimized test cases for better coverage.' %}
+                      </li>
+                      <li>
+                        {% trans 'Perform security testing to identify vulnerabilities such as SQL injection, cross-site scripting (XSS), and unauthorized access.' %}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item resume-item">
+                <h2 class="accordion-header">
+                  <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <strong>{% trans 'Manual and Functional Testing' %}</strong>
+                  </a>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        {% trans 'Conducted manual testing on both projects to ensure that the requirements and specifications defined in the user stories (HU) were met, focusing mainly on the risk matrix following the test plan.' %}
+                      </li>
+                      <li>
+                        {% trans 'Define the scope, objectives, and strategy for manual and functional testing.' %}
+                      </li>
+                      <li>
+                        {% trans 'Create detailed test plans and test cases based on requirements, specifications, and user stories.' %}
+                      </li>
+                      <li>
+                        {% trans 'Design and document test cases and test scenarios that cover all functional aspects of the application.' %}
+                      </li>
+                      <li>
+                        {% trans 'Ensure test cases include valid and invalid inputs, edge cases, and boundary conditions.' %}
+                      </li>
+                      <li>
+                        {% trans 'Prepare and organize test data required for test execution.' %}
+                      </li>
+                      <li>
+                        {% trans 'Execute manual test cases to verify that the application functions as expected.' %}
+                      </li>
+                      <li>
+                        {% trans 'Validate application features, workflows, and user interactions based on the test cases.' %}
+                      </li>
+                      <li>
+                        {% trans 'Document and report defects with detailed descriptions, steps to reproduce, and severity levels.' %}
+                      </li>
+                      <li>
+                        {% trans 'Evaluate the application’s usability, user interface, and user experience.' %}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
 
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">&nbsp;</h3>
         <div class="resume-item">
-          <h4>Esstrategia</h4>
-          <p><em>{% trans 'Full Stack Developer and QA Engineer' %}</em></p>
-          <h5>{% trans 'Feb 2018 - Dec 2021' %}</h5>
-          <div class="resume-item">
-            <h5>{% trans 'CRM and ERP' %}</h5>
-            <ul>
-              <li>
-                {% blocktrans %}
-                  Implemented a CRM system for an educational institution that
-                  integrates data from Moodle and WordPress platforms to provide a
-                  centralized and organized view of students, course information,
-                  ERP and CRM.
-                {% endblocktrans %}
-              </li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h5>{% trans 'Moodle (E-Learning Education Platform)' %}</h5>
-            <ul>
-              <li>
-                {% blocktrans %}
-                  Used Moodle to create a virtual education platform, including
-                  course management, enrollment tracking, and reporting features.
-                {% endblocktrans %}
-              </li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h5>{% trans 'Sentinel (Medical Qualification Software)' %}</h5>
-            <ul>
-              <li>
-                {% blocktrans %}
-                  Developed medical qualification software using natural language
-                  processing (NLP), support vector machines (SVM), and decision
-                  tree algorithms to determine the origin qualification of medical
-                  conditions.
-                {% endblocktrans %}
-              </li>
-            </ul>
+            <h4>Esstrategia</h4>
+            <p><em>{% trans 'Full Stack Developer, QA Engineer and AQA' %}</em></p>
+            <h5>{% trans 'Feb 2018 - Dec 2021' %}</h5>
+            <p>
+              {% trans 'Led the development and implementation of a CRM system for an educational institution, integrating it with an ERP and data from Moodle and WordPress platforms to provide a centralized view of student and course information. Implement and develop the algorithm to determine the origin of medical conditions using machine learning.' %}
+            </p>
+
+            <div class="accordion">
+              <div class="accordion-item resume-item">
+                <h2 class="accordion-header">
+                  <a class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEOne" aria-expanded="true" aria-controls="collapseEOne">
+                    <strong>{% trans 'CRM and ERP' %}</strong>
+                  </a>
+                </h2>
+                <div id="collapseEOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                          {% trans 'Developed and implemented a CRM system for an educational institution that integrates data from Moodle and WordPress platforms, providing a centralized and organized view of students, course information, ERP, and CRM.' %}
+                      </li>
+                      <li>
+                          {% trans 'Designed and built custom dashboards and reports for administrators to monitor student progress and institutional performance.' %}
+                      </li>
+                      <li>
+                          {% trans 'Implemented role-based access control to ensure appropriate data access and permissions for various user types.' %}
+                      </li>
+                      <li>
+                          {% trans 'Developed and executed data migration strategies to ensure seamless integration of legacy data into the new CRM system.' %}
+                      </li>
+                      <li>
+                          {% trans 'Conducted user training and created documentation to facilitate smooth adoption and effective use of the CRM system.' %}
+                      </li>
+                      <li>
+                          {% trans 'Designed and implemented API REST using Django and Django REST Framework to support CRM functionality.' %}
+                      </li>
+                      <li>
+                          {% trans 'Developed and managed server-side logic, including data processing and business logic for the CRM system.' %}
+                      </li>
+                      <li>
+                          {% trans "Ensured data integrity and performed regular database maintenance using Django's ORM." %}
+                      </li>
+                      <li>
+                          {% trans 'Integrated third-party services and APIs to enhance CRM capabilities.' %}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item resume-item">
+                <h2 class="accordion-header">
+                  <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseETwo" aria-expanded="false" aria-controls="collapseETwo">
+                    <strong>{% trans 'Moodle (E-Learning Education Platform)' %}</strong>
+                  </a>
+                </h2>
+                <div id="collapseETwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        {% trans 'Utilized Moodle to develop a comprehensive virtual education platform, featuring course management, enrollment tracking, and detailed reporting capabilities.' %}
+                      </li>
+                      <li>
+                          {% trans 'Customized Moodle themes and templates to enhance the user interface and user experience for both students and instructors.' %}
+                      </li>
+                      <li>
+                          {% trans 'Integrated external tools and resources, such as video conferencing and collaborative tools, into the Moodle platform.' %}
+                      </li>
+                      <li>
+                          {% trans 'Implemented automated testing scripts to ensure the stability and functionality of Moodle upgrades and new features.' %}
+                      </li>
+                      <li>
+                          {% trans "Analyzed user feedback and performance metrics to continuously improve the e-learning platform's functionality and usability." %}
+                      </li>
+                      <li>
+                          {% trans 'Design and implement application structure, including directory layout and module organization for Moodle.' %}
+                      </li>
+                      <li>
+                          {% trans 'Develop reusable React components and manage state with tools like Redux for integrating front-end with Moodle.' %}
+                      </li>
+                      <li>
+                          {% trans 'Ensure responsive design and cross-browser compatibility for Moodle platform features.' %}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item resume-item">
+                <h2 class="accordion-header">
+                  <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEThree" aria-expanded="false" aria-controls="collapseEThree">
+                    <strong>{% trans 'Sentinel (Medical Qualification Software)' %}</strong>
+                  </a>
+                </h2>
+                <div id="collapseEThree" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        {% trans 'Developed medical qualification software using natural language processing (NLP), support vector machines (SVM), and decision tree algorithms to classify and determine the origin of medical conditions.' %}
+                      </li>
+                      <li>
+                          {% trans 'Implemented data preprocessing and feature extraction techniques to enhance the accuracy of NLP models.' %}
+                      </li>
+                      <li>
+                          {% trans 'Integrated medical databases and knowledge sources to improve the decision-making capabilities of the software.' %}
+                      </li>
+                      <li>
+                          {% trans 'Conducted performance benchmarking and optimization of machine learning models to ensure real-time processing capabilities.' %}
+                      </li>
+                      <li>
+                          {% trans "Collaborated with medical professionals to validate and refine the software's classification algorithms and outputs." %}
+                      </li>
+                      <li>
+                          {% trans 'Architect scalable and maintainable software solutions for medical qualification software.' %}
+                      </li>
+                      <li>
+                          {% trans 'Implement authentication and authorization mechanisms to ensure secure access to the medical qualification software.' %}
+                      </li>
+                      <li>
+                          {% trans 'Monitor application performance and manage deployments using tools like Docker.' %}
+                      </li>
+                      <li>
+                          {% trans 'Write unit tests, integration tests, and end-to-end tests for the medical qualification software.' %}
+                      </li>
+                      <li>
+                          {% trans 'Implement security best practices to protect sensitive medical data and ensure secure communication.' %}
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 order-lg-2">
         <h3 class="resume-title" id="education">{% trans 'Education' %}</h3>
         <div class="resume-item">
           <h4>{% trans 'Computer Engineer (Student)' %}</h4>
@@ -146,7 +338,7 @@
         </div>
       </div>
 
-      <div class="col-lg-6 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-6 order-lg-1">
         <h3 class="resume-title" id="certifications">{% trans 'Certifications' %}</h3>
         <div class="resume-item">
           <h4>Microsoft</h4>
@@ -297,7 +489,7 @@
         </div>
       </div>
 
-      <div class="col-lg-6 order-lg-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-6 order-lg-3">
         <h3 class="resume-title">{% trans 'Watched' %}</h3>
         <div class="resume-item">
           <h4>Youtube</h4>

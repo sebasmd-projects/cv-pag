@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-27 00:00-0500\n"
-"PO-Revision-Date: 2024-06-27 20:00-0500\n"
-"Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
+"POT-Creation-Date: 2024-08-07 14:14-0500\n"
+"PO-Revision-Date: 2024-08-07 14:16-0500\n"
+"Last-Translator: Sebastian Morales <sebastian.morales2@spirit.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -48,34 +48,42 @@ msgid "origin"
 msgstr "origen"
 
 #: .\apps\common\utils\models.py:16
+msgid "Spanish"
+msgstr "Español"
+
+#: .\apps\common\utils\models.py:17
+msgid "English"
+msgstr "Ingles"
+
+#: .\apps\common\utils\models.py:21
 msgid "language"
 msgstr "idioma"
 
-#: .\apps\common\utils\models.py:24
+#: .\apps\common\utils\models.py:30
 msgid "created"
 msgstr "creado"
 
-#: .\apps\common\utils\models.py:30
+#: .\apps\common\utils\models.py:36
 msgid "updated"
 msgstr "actualizado"
 
-#: .\apps\common\utils\models.py:36
+#: .\apps\common\utils\models.py:42
 msgid "is active"
 msgstr "está activo"
 
-#: .\apps\common\utils\models.py:41
+#: .\apps\common\utils\models.py:47
 msgid "priority"
 msgstr "prioridad"
 
-#: .\apps\common\utils\models.py:53
+#: .\apps\common\utils\models.py:61
 msgid "requests"
 msgstr "peticiones"
 
-#: .\apps\common\utils\models.py:81
+#: .\apps\common\utils\models.py:89
 msgid "Request"
 msgstr "Petición"
 
-#: .\apps\common\utils\models.py:82
+#: .\apps\common\utils\models.py:90
 msgid "Requests"
 msgstr "Peticiones"
 

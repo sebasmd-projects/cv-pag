@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 20:08-0500\n"
+"POT-Creation-Date: 2024-08-07 14:14-0500\n"
 "PO-Revision-Date: 2024-07-27 00:24-0500\n"
 "Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,8 +45,8 @@ msgid "Remember me"
 msgstr "Recuerdame"
 
 #: .\apps\project\spirit\spirit_core\forms.py:68
-msgid "Las credenciales son inválidas"
-msgstr "Credenciales inválidas"
+msgid "Invalid credentials"
+msgstr ""
 
 #: .\apps\project\spirit\spirit_core\forms.py:80
 #: .\apps\project\spirit\spirit_core\forms.py:87
@@ -109,6 +109,40 @@ msgstr "Términos y Condiciones"
 #: .\apps\project\spirit\spirit_core\forms.py:242
 msgid "Passwords do not match"
 msgstr "Las contraseñan no coinciden"
+
+#: .\apps\project\spirit\spirit_core\models.py:14
+msgid "Select One"
+msgstr ""
+
+#: .\apps\project\spirit\spirit_core\models.py:15
+msgid "Departure"
+msgstr ""
+
+#: .\apps\project\spirit\spirit_core\models.py:16
+msgid "Arrival"
+msgstr ""
+
+#: .\apps\project\spirit\spirit_core\models.py:20
+msgid "category"
+msgstr ""
+
+#: .\apps\project\spirit\spirit_core\models.py:27
+#, fuzzy
+#| msgid "Last name"
+msgid "Flight name"
+msgstr "Apellidos"
+
+#: .\apps\project\spirit\spirit_core\models.py:33
+msgid "Flight number"
+msgstr ""
+
+#: .\apps\project\spirit\spirit_core\models.py:42
+msgid "1.0 Flight"
+msgstr ""
+
+#: .\apps\project\spirit\spirit_core\models.py:43
+msgid "1.0 Flights"
+msgstr ""
 
 #: .\apps\project\spirit\spirit_core\templates\spirit\account\includes\footer.html:5
 msgid "Conditions of service"
@@ -182,16 +216,16 @@ msgstr "Mensajes"
 #: .\apps\project\spirit\spirit_core\templates\spirit\includes\sidenav.html:55
 #: .\apps\project\spirit\spirit_core\templates\spirit\includes\sidenav.html:68
 #: .\apps\project\spirit\spirit_core\templates\spirit\includes\sidenav.html:81
-msgid "Activities"
-msgstr "Actividades"
+msgid "Data Sheet"
+msgstr "Hoja de Datos"
 
 #: .\apps\project\spirit\spirit_core\templates\spirit\includes\sidenav.html:30
 #: .\apps\project\spirit\spirit_core\templates\spirit\includes\sidenav.html:43
 #: .\apps\project\spirit\spirit_core\templates\spirit\includes\sidenav.html:56
 #: .\apps\project\spirit\spirit_core\templates\spirit\includes\sidenav.html:69
 #: .\apps\project\spirit\spirit_core\templates\spirit\includes\sidenav.html:82
-msgid "Data Sheet"
-msgstr "Hoja de Datos"
+msgid "Activities"
+msgstr "Actividades"
 
 #: .\apps\project\spirit\spirit_core\templates\spirit\includes\sidenav.html:36
 msgid "Baggage"
@@ -240,3 +274,6 @@ msgstr "Usuario o Contraseña incorrectos"
 #: .\apps\project\spirit\spirit_core\views.py:101
 msgid "Activate your Spirit account"
 msgstr "Activa tu cuenta Spirit"
+
+#~ msgid "Las credenciales son inválidas"
+#~ msgstr "Credenciales inválidas"

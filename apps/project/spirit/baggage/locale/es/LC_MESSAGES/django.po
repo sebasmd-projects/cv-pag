@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 20:08-0500\n"
+"POT-Creation-Date: 2024-08-07 14:14-0500\n"
 "PO-Revision-Date: 2024-07-27 00:04-0500\n"
 "Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\apps\project\spirit\baggage\models.py:19
+msgid "Agent"
+msgstr ""
+
+#: .\apps\project\spirit\baggage\models.py:26
+msgid "Flight"
+msgstr ""
+
+#: .\apps\project\spirit\baggage\models.py:32
+msgid "cart name"
+msgstr ""
+
+#: .\apps\project\spirit\baggage\models.py:34
+msgid "diligence "
+msgstr ""
+
+#: .\apps\project\spirit\baggage\models.py:38
+msgid "cart code"
+msgstr ""
+
+#: .\apps\project\spirit\baggage\models.py:43
+msgid "cart number"
+msgstr ""
+
+#: .\apps\project\spirit\baggage\models.py:47
+#, fuzzy
+#| msgid "Baggage"
+msgid "total baggage"
+msgstr "Equipaje"
+
+#: .\apps\project\spirit\baggage\models.py:55
+msgid "2.0 Baggage Shipping"
+msgstr ""
+
+#: .\apps\project\spirit\baggage\models.py:56
+msgid "2.0 Baggage Shippings"
+msgstr ""
+
+#: .\apps\project\spirit\baggage\models.py:61
+msgid "seal number"
+msgstr ""
+
+#: .\apps\project\spirit\baggage\models.py:66
+msgid "baggage shipping"
+msgstr ""
+
+#: .\apps\project\spirit\baggage\models.py:76
+msgid "2.1 Seal"
+msgstr ""
+
+#: .\apps\project\spirit\baggage\models.py:77
+msgid "2.1 Seals"
+msgstr ""
 
 #: .\apps\project\spirit\baggage\templates\baggage_base.html:16
 msgid "Sebastian Morales | Spirit | Baggages"
