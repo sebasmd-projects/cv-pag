@@ -308,7 +308,7 @@ msgid "Senior Quality Assurance Engineer"
 msgstr "Ingeniero Senior de Aseguramiento de Calidad"
 
 #: .\apps\project\page\index\templates\sections\resume.html:40
-msgid "Dec 2021 - Aug 2023"
+msgid "Dec 2021 - Jun 2023"
 msgstr "Dic 2021 - Ago 2023"
 
 #: .\apps\project\page\index\templates\sections\resume.html:42
