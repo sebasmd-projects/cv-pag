@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-07 14:14-0500\n"
-"PO-Revision-Date: 2024-07-27 00:24-0500\n"
-"Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
+"PO-Revision-Date: 2024-08-12 09:59-0500\n"
+"Last-Translator: Sebastian Morales <sebastian.morales2@spirit.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgstr "Recuerdame"
 
 #: .\apps\project\spirit\spirit_core\forms.py:68
 msgid "Invalid credentials"
-msgstr ""
+msgstr "Credenciales no válidas"
 
 #: .\apps\project\spirit\spirit_core\forms.py:80
 #: .\apps\project\spirit\spirit_core\forms.py:87
@@ -112,37 +112,36 @@ msgstr "Las contraseñan no coinciden"
 
 #: .\apps\project\spirit\spirit_core\models.py:14
 msgid "Select One"
-msgstr ""
+msgstr "Seleccione uno"
 
 #: .\apps\project\spirit\spirit_core\models.py:15
 msgid "Departure"
-msgstr ""
+msgstr "Partida"
 
 #: .\apps\project\spirit\spirit_core\models.py:16
 msgid "Arrival"
-msgstr ""
+msgstr "Llegada"
 
 #: .\apps\project\spirit\spirit_core\models.py:20
 msgid "category"
-msgstr ""
+msgstr "categoría"
 
 #: .\apps\project\spirit\spirit_core\models.py:27
-#, fuzzy
 #| msgid "Last name"
 msgid "Flight name"
-msgstr "Apellidos"
+msgstr "Nombre del vuelo"
 
 #: .\apps\project\spirit\spirit_core\models.py:33
 msgid "Flight number"
-msgstr ""
+msgstr "Número de vuelo"
 
 #: .\apps\project\spirit\spirit_core\models.py:42
 msgid "1.0 Flight"
-msgstr ""
+msgstr "1.0 Vuelo"
 
 #: .\apps\project\spirit\spirit_core\models.py:43
 msgid "1.0 Flights"
-msgstr ""
+msgstr "1.0 Vuelos"
 
 #: .\apps\project\spirit\spirit_core\templates\spirit\account\includes\footer.html:5
 msgid "Conditions of service"

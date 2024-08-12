@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-07 14:14-0500\n"
-"PO-Revision-Date: 2024-07-27 00:17-0500\n"
-"Last-Translator: Sebastian Morales <sebasmoralesd@gmail.com>\n"
+"PO-Revision-Date: 2024-08-12 10:03-0500\n"
+"Last-Translator: Sebastian Morales <sebastian.morales2@spirit.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -21,14 +21,12 @@ msgstr ""
 
 #: .\apps\project\spirit\rampone\forms.py:42
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:85
-#, fuzzy
 #| msgid "Flight arrival"
 msgid "Flight Arrival"
 msgstr "Vuelo llegando"
 
 #: .\apps\project\spirit\rampone\forms.py:48
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:93
-#, fuzzy
 #| msgid "Flight departure"
 msgid "Flight Departure"
 msgstr "Vuelo saliendo"
@@ -118,7 +116,7 @@ msgstr "Último desabordo"
 
 #: .\apps\project\spirit\rampone\models.py:133
 msgid "airplane winery inspection"
-msgstr ""
+msgstr "inspección de bodega de avión"
 
 #: .\apps\project\spirit\rampone\models.py:138
 msgid "arrival of the first baggage shipping"
@@ -133,10 +131,9 @@ msgid "rear ladder coupling begins"
 msgstr "Acople escalera"
 
 #: .\apps\project\spirit\rampone\models.py:150
-#, fuzzy
 #| msgid "rear ladder coupling begins"
 msgid "rear ladder coupling end"
-msgstr "Acople escalera"
+msgstr "Desacople escalera"
 
 #: .\apps\project\spirit\rampone\models.py:154
 msgid "maintenance arrival"
@@ -171,10 +168,9 @@ msgid "plant decoupling"
 msgstr "Fin de Planta"
 
 #: .\apps\project\spirit\rampone\models.py:189
-#, fuzzy
 #| msgid "baggage shipping 1 total"
 msgid "baggage shipping"
-msgstr "Diligencia 1 (Total Maletas)"
+msgstr "Envío de equipaje"
 
 #: .\apps\project\spirit\rampone\models.py:193
 msgid "baggage load cp1"
@@ -211,82 +207,73 @@ msgstr "Hoja de Datos"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:44
 msgid "Print"
-msgstr ""
+msgstr "Imprimir"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:76
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:77
-#, fuzzy
 #| msgid "license plate"
 msgid "License Plate"
 msgstr "Matrícula"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:100
-#, fuzzy
 #| msgid "airplane tire lock"
 msgid "Lock Airplane Tire"
 msgstr "Bloqueo"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:101
-#, fuzzy
 #| msgid "airplane tire lock"
 msgid "Airplane Tire Lock"
 msgstr "Bloqueo"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:115
 msgid "Open Winery 1"
-msgstr ""
+msgstr "Apertura Bodega 1"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:125
 msgid "Closure Winery 1"
-msgstr ""
+msgstr "Cierre Bodega 1"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:139
-#, fuzzy
 #| msgid "rear ladder coupling begins"
 msgid "Begins Rear Ladder Coupling"
 msgstr "Acople escalera"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:149
-#, fuzzy
 #| msgid "rear ladder coupling begins"
 msgid "End Rear Ladder Coupling"
-msgstr "Acople escalera"
+msgstr "Desacople escalera"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:163
-#, fuzzy
 #| msgid "first unloading of luggage"
 msgid "First Unloading of Luggage"
 msgstr "Primer desabordo"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:173
-#, fuzzy
 #| msgid "last unloading of luggage"
 msgid "Last Unloading of Luggage"
 msgstr "Último desabordo"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:186
 msgid "Airplane Winery Inspection"
-msgstr ""
+msgstr "Inspección de bodega de avión"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:200
-#, fuzzy
 #| msgid "arrival of the last baggage shipping"
 msgid "First Arrival of the Baggage Shipping"
-msgstr "Llegada último envío (Diligencias)"
+msgstr "Llegada primer envío (Diligencias)"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:210
-#, fuzzy
 #| msgid "arrival of the last baggage shipping"
 msgid "Last Arrival of the Baggage Shipping"
 msgstr "Llegada último envío (Diligencias)"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:224
 msgid "Arrival Maintenace"
-msgstr ""
+msgstr "Llegada Mantenimiento"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:234
 msgid "Output Maintenace"
-msgstr ""
+msgstr "Salida Mantenimiento"
 
 #: .\apps\project\spirit\rampone\templates\rampone\partials\content.html:249
 msgid "Save"
@@ -301,14 +288,16 @@ msgid ""
 "Sebastián Morales - Guides, Checklist and others for Qualified Agent SPIRIT "
 "on the position of ramp one"
 msgstr ""
+"Sebastián Morales - Guías, Lista de Verificación y otros para el Agente "
+"Calificado SPIRIT en la posición de la rampa uno"
 
 #: .\apps\project\spirit\rampone\templates\rampone_base.html:7
 msgid "Sebastian Morales, Spirit, Airline, MDE, Longport"
-msgstr ""
+msgstr "Sebastián Morales, Spirit, Aerolínea, MDE, Longport"
 
 #: .\apps\project\spirit\rampone\templates\rampone_base.html:11
 msgid "Sebastian Morales | Spirit | Ramp One"
-msgstr ""
+msgstr "Sebastián Morales | Espíritu | Rampa uno"
 
 #: .\apps\project\spirit\rampone\views.py:75
 msgid "Activity already completed today."
