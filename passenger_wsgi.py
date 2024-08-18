@@ -1,3 +1,9 @@
-from app_core.wsgi import application
+import imp
+import os
+import sys
 
-application = application
+
+sys.path.insert(0, os.path.dirname(__file__))
+
+wsgi = imp.load_source('wsgi', 'app_core/wsgi.py')
+application = wsgi.application
