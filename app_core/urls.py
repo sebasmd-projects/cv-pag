@@ -112,6 +112,6 @@ roseta_urls = [
     ),
 ]
 
-urlpatterns = admin_urls + account_urls + ckeditor_urls + apps_urls + sitemap_urls + \
-    swagger_urls + roseta_urls + \
-    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns = admin_urls + account_urls + ckeditor_urls
+urlpatterns += apps_urls + sitemap_urls + swagger_urls + roseta_urls
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

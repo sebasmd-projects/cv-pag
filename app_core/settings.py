@@ -11,7 +11,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
-DEBUG = bool(os.getenv('DJANGO_DEBUG'))
+if os.getenv('DJANGO_DEBUG') == 'True':
+    DEBUG = True
+else:
+    DEBUG = False
 
 if ',' in os.getenv('DJANGO_ALLOWED_HOSTS'):
     ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS').split(',')
@@ -190,10 +193,7 @@ ROSETTA_SHOW_AT_ADMIN_PANEL = True
 
 USE_I18N = True
 
-STATIC_URL = 'static/'
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 STATIC_ROOT = str(BASE_DIR / 'public' / 'staticfiles')
 
@@ -283,6 +283,9 @@ CKEDITOR_5_CONFIGS = {
 }
 
 CKEDITOR_5_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
+DATA_UPLOAD_MAX_NUMBER_FIELDS=15000
+
 
 SWAGGER_SETTINGS = {
     'USE_SESSION_AUTH': True,
