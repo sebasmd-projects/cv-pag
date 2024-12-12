@@ -25,12 +25,10 @@ schema_view = get_schema_view(
 admin_url = settings.ADMIN_URL
 
 custom_apps = settings.CUSTOM_APPS
-spirit_apps = settings.SPIRIT_APPS
 
 utils_path = settings.UTILS_PATH
 
 apps_urls = [path('', include(f'{app}.urls')) for app in custom_apps]
-apps_urls += [path('spirit/', include(f'{app}.urls')) for app in spirit_apps]
 
 apps_sitemaps = {
     'home': IndexViewSitemap
@@ -111,6 +109,8 @@ roseta_urls = [
         include('rosetta.urls')
     ),
 ]
+
+
 
 urlpatterns = admin_urls + account_urls + ckeditor_urls
 urlpatterns += apps_urls + sitemap_urls + swagger_urls + roseta_urls

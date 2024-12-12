@@ -62,3 +62,36 @@
     </div>
   </div>
 </section>
+
+{% if show_modal %}
+<!-- Modal de Bootstrap -->
+<div class="modal fade" id="contactSuccessModal" tabindex="-1" aria-labelledby="contactSuccessModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="contactSuccessModalLabel">{% trans 'Your message has been sent!' %}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{% trans 'Close' %}"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          {% trans "If you have any questions or need additional information, you can write to me directly at my personal number:" %}
+          <a href="https://wa.me/573002954040" target="_blank" rel="noopener noreferrer">+57 300 295 4040</a>
+          {% trans "or email me at" %}
+          <a href="mailto:sebasmoralesd@gmail.com" target="_blank" rel="noopener noreferrer">sebasmoralesd@gmail.com</a>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans 'Close' %}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script para mostrar el modal al cargar la página -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var myModal = new bootstrap.Modal(document.getElementById('contactSuccessModal'), {});
+    myModal.show();
+  });
+</script>
+{% endif %}

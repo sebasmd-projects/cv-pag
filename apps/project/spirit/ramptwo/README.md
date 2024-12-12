@@ -1,3 +1,0 @@
-# RAMPTWO
-
-## Description

@@ -1,4 +1,4 @@
-{% load static i18n %}
+{% load static honeypot i18n %}
 
 <form
   action="{% url 'index:contact' %}"
@@ -10,7 +10,7 @@
   {% csrf_token %}
   {{contact_form.non_field_errors}}
   {{contact_form.unique_id}}
-
+  {% render_honeypot_field "mail_validation" %}
   <div class="row gy-2">
     <div class="col-md-6">{{contact_form.names}}</div>
     <div class="col-md-6">{{contact_form.email}}</div>

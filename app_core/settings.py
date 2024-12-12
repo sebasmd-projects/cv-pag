@@ -1,6 +1,7 @@
 import os
 from datetime import timedelta
 from pathlib import Path
+import sentry_sdk
 
 from django.utils.translation import gettext_lazy as _
 from dotenv import load_dotenv
@@ -26,48 +27,49 @@ DJANGO_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.humanize',
-    'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.sessions',
     'django.contrib.sitemaps',
+    'django.contrib.staticfiles',
 ]
 
 THIRD_PARTY_APPS = [
+    'adminsortable2',
     'auditlog',
+    'axes',
     'corsheaders',
+    'django_ckeditor_5',
+    'django_cleanup.apps.CleanupConfig',
+    'django_filters',
+    'django_recaptcha',
     'drf_yasg',
+    'honeypot',
+    'import_export',
+    'parler',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
-    'django_cleanup.apps.CleanupConfig',
-    'django_filters',
-    'adminsortable2',
-    'import_export',
+    'rosetta',
     'whitenoise.runserver_nostatic',
-    'django_ckeditor_5',
-    'parler',
-    'rosetta'
 ]
 
 CUSTOM_APPS = [
-    'apps.common.utils',
     'apps.common.serverhttp',
+    'apps.common.utils',
 
     'apps.project.common.users',
-
+    
     'apps.project.page.index',
 ]
 
-SPIRIT_APPS = [
-    'apps.project.spirit.spirit_core',
-    'apps.project.spirit.ramptwo',
-    'apps.project.spirit.rampone',
-    'apps.project.spirit.pbe',
-    'apps.project.spirit.door',
-    'apps.project.spirit.baggage'
-]
+# sentry_sdk.init(
+#     dsn="https://a0a98a12b7b36ad50aaf8626eaff858c@o4508085497626624.ingest.us.sentry.io/4508085499461632",
+#     traces_sample_rate=0.1, #Capture 10%
+#     profiles_sample_rate=0.01, #Profile 1%
+#     send_default_pii=False
+# )
 
-ALL_CUSTOM_APPS = CUSTOM_APPS + SPIRIT_APPS
+ALL_CUSTOM_APPS = CUSTOM_APPS
 
 LOCALE_PATHS = [
     app_path / 'locale' for app_path in [BASE_DIR / app.replace('.', '/') for app in ALL_CUSTOM_APPS]
@@ -99,6 +101,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'apps.common.utils.middleware.APILogMiddleware',
+    'axes.middleware.AxesMiddleware',
 ]
 
 MIDDLEWARE_NOT_INCLUDE = [os.getenv('MIDDLEWARE_NOT_INCLUDE')]
@@ -156,6 +159,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTHENTICATION_BACKENDS = [
+    'axes.backends.AxesStandaloneBackend',
     'django.contrib.auth.backends.ModelBackend',
     f'{UTILS_PATH}.backend.EmailUsernameEmployeeIDModelBackend',
 ]
@@ -195,20 +199,20 @@ USE_I18N = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_ROOT = str(BASE_DIR / 'public' / 'staticfiles')
+STATIC_URL = '/static/'
 
-STATIC_URL = 'public/static/'
+STATIC_ROOT = str(os.getenv('DJANGO_STATIC_ROOT'))
 
-STATICFILES_DIRS = [str(BASE_DIR / 'public' / 'static')]
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = str(os.getenv('DJANGO_MEDIA_ROOT'))
+
+STATICFILES_DIRS = [str(BASE_DIR / 'public' / 'staticfiles')]
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
-
-MEDIA_ROOT = str(BASE_DIR / 'public' / 'media')
-
-MEDIA_URL = "public/media/"
 
 STORAGES = {
     "default": {
@@ -286,7 +290,6 @@ CKEDITOR_5_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
 DATA_UPLOAD_MAX_NUMBER_FIELDS=15000
 
-
 SWAGGER_SETTINGS = {
     'USE_SESSION_AUTH': True,
     'SECURITY_DEFINITIONS': {
@@ -315,5 +318,6 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
-SPIRIT_PERMISSION_GROUP_NAME = os.getenv('SPIRIT_PERMISSION_GROUP_NAME')
-SPIRIT_SUPERVISOR_PERMISSION_GROUP_NAME = os.getenv('SPIRIT_SUPERVISOR_PERMISSION_GROUP_NAME')
+HONEYPOT_FIELD_NAME = 'mail_validation'
+
+SILENCED_SYSTEM_CHECKS = ['django_recaptcha.recaptcha_test_key_error']

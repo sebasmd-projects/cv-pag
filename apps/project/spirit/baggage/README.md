@@ -1,3 +1,0 @@
-# BAGGAGE
-
-## Description

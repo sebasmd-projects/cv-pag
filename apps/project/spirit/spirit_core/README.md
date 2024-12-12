@@ -1,3 +1,0 @@
-# SPIRIT_CORE
-
-## Description

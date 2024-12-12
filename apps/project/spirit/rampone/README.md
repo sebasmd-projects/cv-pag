@@ -1,3 +1,0 @@
-# RAMPONE
-
-## Description
